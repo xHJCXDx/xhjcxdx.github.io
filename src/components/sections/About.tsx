@@ -11,10 +11,10 @@ export const About: React.FC = () => {
                 </h2>
                 <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
                 <p>
-                    &gt; Contributing my bit to this world full of challenges.
+                    &gt; Technical Student in Programming.
                 </p>
                 <p>
-                    &gt; Backend programmer
+                    &gt; Backend programmer.
                 </p>
                 <p>
                     &gt; I like simple and functional things.

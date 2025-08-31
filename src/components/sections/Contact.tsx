@@ -11,7 +11,13 @@ export const Contact: React.FC = () => {
             
             <div className="mb-12">
             <p className="text-xl font-mono text-gray-300 mb-8">
-                &gt; ¿Tienes un proyecto en mente? ¡Hablemos!
+                &gt; Got something on your mind? <span className="text-cyan-400">Let's create together.</span>
+            </p>
+            <p className="text-xl font-mono text-gray-300 mb-8">
+                &gt; Going through problems? <span className="text-cyan-400">I'll solve them for you.</span>
+            </p>
+            <p className="text-xl font-mono text-gray-300 mb-8">
+                &gt; Need a hand? <span className="text-cyan-400">I'll give you two.</span>
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -32,7 +38,7 @@ export const Contact: React.FC = () => {
                 READY TO <span className="text-cyan-400">COLLABORATE</span>?
             </div>
             <button className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-mono hover:bg-cyan-400 hover:text-black transition-all duration-300">
-                INICIAR PROYECTO
+                START PROJECT
             </button>
             </div>
         </div>

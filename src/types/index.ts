@@ -16,7 +16,7 @@ export interface Project {
     title: string;
     tech: string;
     description: string;
-    status: 'COMPLETADO' | 'EN DESARROLLO';
+    status: 'FILLED' | 'UNDER DEVELOPMENT';
 }
 
 export interface ContactMethod {
@@ -24,5 +24,5 @@ export interface ContactMethod {
     icon: LucideIcon;
     title: string;
     subtitle: string;
-    color: 'cyan' | 'purple';
+    color: 'cyan' | 'purple' | 'yellow';
 }

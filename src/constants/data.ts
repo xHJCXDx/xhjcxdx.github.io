@@ -2,11 +2,11 @@ import { User, Zap, Briefcase, Send, Mail, Linkedin, Github } from 'lucide-react
 import type { NavItem, SkillCategory, Project, ContactMethod } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
-    { id: 'home', label: 'INICIO', icon: User },
-    { id: 'about', label: 'ACERCA', icon: User },
+    { id: 'home', label: 'START', icon: User },
+    { id: 'about', label: 'ABOUT', icon: User },
     { id: 'skills', label: 'SKILLS', icon: Zap },
-    { id: 'projects', label: 'PROYECTOS', icon: Briefcase },
-    { id: 'contact', label: 'CONTACTO', icon: Send }
+    { id: 'projects', label: 'PROJECTS', icon: Briefcase },
+    { id: 'contact', label: 'CONTACT', icon: Send }
 ];
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
@@ -17,12 +17,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     },
     {
         title: "BACKEND", 
-        skills: ["Node.js", "Express", "Python", "Django", "PostgreSQL"],
+        skills: ["Node.js", "Express", "Python", "SQL"],
         color: "purple"
     },
     {
         title: "TOOLS",
-        skills: ["Git", "Docker", "AWS", "MongoDB", "GraphQL"],
+        skills: ["Git", "Docker", "MongoDB", "Visual Studio Code", "Linux"],
         color: "cyan"
     }
 ];
@@ -30,44 +30,50 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 export const PROJECTS: Project[] = [
     {
         title: "E-COMMERCE PLATFORM",
-        tech: "React • Node.js • MongoDB",
-        description: "Plataforma de comercio electrónico completa con sistema de pagos integrado y panel de administración.",
-        status: "COMPLETADO"
+        tech: "React • Node.js • SQL",
+        description: "Website for the paint trade (SME).",
+        status: "FILLED"
     },
     {
-        title: "TASK MANAGER APP", 
-        tech: "Vue.js • Express • PostgreSQL",
-        description: "Aplicación de gestión de tareas con colaboración en tiempo real y sincronización multi-dispositivo.",
-        status: "EN DESARROLLO"
+        title: "Legado+", 
+        tech: "HTML • CSS • JavaScript • SQL",
+        description: "Website for learning programming and technology news.",
+        status: "UNDER DEVELOPMENT"
     },
     {
-        title: "AI CHATBOT SYSTEM",
-        tech: "Python • TensorFlow • React",
+        title: "Asistencia", 
+        tech: "ReactNative • Node.js • SQLite",
+        description: "Attendance management application for educational institutions with report generation and notifications.",
+        status: "UNDER DEVELOPMENT"
+    },
+    {
+        title: "CPhysics",
+        tech: "Python",
         description: "Sistema de chatbot inteligente con procesamiento de lenguaje natural y aprendizaje automático.",
-        status: "COMPLETADO"
+        status: "FILLED"
     } 
 ];
 
 export const CONTACT_METHODS: ContactMethod[] = [
     {
-        href: "mailto:juan@example.com",
+        href: "mailto:legado1x@email.com",
         icon: Mail,
         title: "EMAIL",
-        subtitle: "juan@example.com",
-        color: "cyan"
+        subtitle: "legado1x@email.com",
+        color: "yellow"
     },
     {
-        href: "https://linkedin.com",
+        href: "www.linkedin.com/in/hiro-julian-cruz-4737902ba",
         icon: Linkedin,
         title: "LINKEDIN",
-        subtitle: "/in/juandev",
+        subtitle: "/in/hiro-julian-cruz",
         color: "purple"
     },
     {
-        href: "https://github.com",
+        href: "https://github.com/xHJCXDx",
         icon: Github,
         title: "GITHUB",
-        subtitle: "@juandev",
+        subtitle: "@xHJCXDx",
         color: "cyan"
     }
 ];
