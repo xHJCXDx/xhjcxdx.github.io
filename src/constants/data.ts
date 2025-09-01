@@ -12,7 +12,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const SKILL_CATEGORIES: SkillCategory[] = [
     {
         title: "FRONTEND",
-        skills: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Vue.js"],
+        skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
         color: "cyan"
     },
     {
@@ -29,7 +29,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
 
 export const PROJECTS: Project[] = [
     {
-        title: "E-COMMERCE PLATFORM",
+        title: "Painting SME",
         tech: "React • Node.js • SQL",
         description: "Website for the paint trade (SME).",
         status: "FILLED"

@@ -17,7 +17,7 @@ export const About: React.FC = () => {
                     &gt; Backend programmer.
                 </p>
                 <p>
-                    &gt; I like simple and functional things.
+                    &gt; Contributing my bit to this world full of challenges.
                 </p>
                 </div>
             </div>

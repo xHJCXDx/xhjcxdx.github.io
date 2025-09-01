@@ -56,7 +56,7 @@ export const Home: React.FC = () => {
             <ChevronDown className="text-gray-400 animate-bounce mx-auto" size={32} />
             <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
                 <p>
-                    &gt; Contributing my bit to this world full of challenges.
+                    &gt; The beauty of simplicity
                 </p>
             </div>
         </div>
