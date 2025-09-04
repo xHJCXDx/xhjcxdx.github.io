@@ -35,12 +35,12 @@ export const Projects: React.FC = () => {
                 </p>
                 
                 <div className="flex space-x-3">
-                    <button className="flex-1 py-2 border border-purple-400 text-purple-400 font-mono text-sm hover:bg-purple-400/10 transition-all">
-                    SEE PROJECT
-                    </button>
-                    <button className="p-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition-all">
-                    <Github size={16} />
-                    </button>
+                    <a href={project.projectUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-purple-400 text-purple-400 font-mono text-sm hover:bg-purple-400/10 transition-all text-center">
+                        SEE PROJECT
+                    </a>
+                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="p-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition-all">
+                        <Github size={16} />
+                    </a>
                 </div>
                 </div>
             ))}

@@ -32,25 +32,33 @@ export const PROJECTS: Project[] = [
         title: "Painting SME",
         tech: "React • Node.js • SQL",
         description: "Website for the paint trade (SME).",
-        status: "FILLED"
+        status: "FILLED",
+        projectUrl: "",
+        githubUrl:""
     },
     {
         title: "Legado+", 
         tech: "HTML • CSS • JavaScript • SQL",
         description: "Website for learning programming and technology news.",
-        status: "UNDER DEVELOPMENT"
+        status: "UNDER DEVELOPMENT",
+        projectUrl: "",
+        githubUrl:""
     },
     {
         title: "Asistencia", 
         tech: "ReactNative • Node.js • SQLite",
         description: "Attendance management application for educational institutions with report generation and notifications.",
-        status: "UNDER DEVELOPMENT"
+        status: "UNDER DEVELOPMENT",
+        projectUrl: "",
+        githubUrl:""
     },
     {
         title: "CPhysics",
         tech: "Python",
         description: "Sistema de chatbot inteligente con procesamiento de lenguaje natural y aprendizaje automático.",
-        status: "FILLED"
+        status: "FILLED",
+        projectUrl: "https://github.com/xHJCXDx/CPhysics.git",
+        githubUrl:""
     } 
 ];
 
