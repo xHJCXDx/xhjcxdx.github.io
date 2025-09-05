@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { CONTACT_METHODS } from '@/constants/data';
 
 export const Contact: React.FC = () => {
+    const [showForm, setShowForm] = useState(false);
+
     return (
         <section className="min-h-screen py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
@@ -34,12 +36,49 @@ export const Contact: React.FC = () => {
             </div>
 
             <div className="border border-purple-500/50 p-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
-            <div className="text-2xl font-mono text-white mb-4">
-                READY TO <span className="text-cyan-400">COLLABORATE</span>?
-            </div>
-            <button className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-mono hover:bg-cyan-400 hover:text-black transition-all duration-300">
-                START PROJECT
-            </button>
+            {!showForm ? (
+                <>
+                <div className="text-2xl font-mono text-white mb-4">
+                    READY TO <span className="text-cyan-400">COLLABORATE</span>?
+                </div>
+                <button 
+                    onClick={() => setShowForm(true)}
+                    className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-mono hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                >
+                    START PROJECT
+                </button>
+                </>
+            ) : (
+                <form className="text-left">
+                    <div className="mb-4">
+                        <label htmlFor="name" className="block text-cyan-400 font-mono mb-2">NAME:</label>
+                        <input type="text" id="name" className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="email" className="block text-cyan-400 font-mono mb-2">EMAIL:</label>
+                        <input type="email" id="email" className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
+                    </div>
+                    <div className="mb-4">
+                        <label htmlFor="message" className="block text-cyan-400 font-mono mb-2">MESSAGE:</label>
+                        <textarea id="message" rows={4} className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400"></textarea>
+                    </div>
+                    <div className="flex justify-end gap-4">
+                        <button 
+                            type="button"
+                            onClick={() => setShowForm(false)}
+                            className="px-6 py-2 border-2 border-gray-500 text-gray-400 font-mono hover:bg-gray-500 hover:text-white transition-all duration-300"
+                        >
+                            CANCEL
+                        </button>
+                        <button 
+                            type="submit"
+                            className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 font-mono hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                        >
+                            SEND MESSAGE
+                        </button>
+                    </div>
+                </form>
+            )}
             </div>
         </div>
         </section>
