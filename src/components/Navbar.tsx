@@ -21,7 +21,11 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
             {/* Logo */}
             <div className="flex items-center space-x-2">
                 <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-cyan-400 overflow-hidden flex items-center justify-center">
+<<<<<<< HEAD
                     <img src="/logo.svg" alt="Logo Vite" className="w-full h-full object-cover rotate-[deg]" />
+=======
+                    <img src="public/logo.svg" alt="Logo Vite" className="w-full h-full object-cover rotate-[deg]" />
+>>>>>>> 8436d3f0ff26d598cf3401af2d727539bce5d7f0
                 </div>
                 <span className="text-cyan-400 font-mono text-sm sm:text-lg font-bold">xHJCXDx.EXE</span>
             </div>
