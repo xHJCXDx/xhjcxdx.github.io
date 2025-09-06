@@ -14,7 +14,7 @@ export const About: React.FC = () => {
                     &gt; Technical Student in Programming.
                 </p>
                 <p>
-                    &gt; Backend programmer.
+                    &gt; Fullstack programmer. Focused more on the backend.
                 </p>
                 <p>
                     &gt; Contributing my bit to this world full of challenges.
@@ -30,7 +30,7 @@ export const About: React.FC = () => {
                     <div className="text-sm text-gray-400 font-mono">PROJECTS</div>
                     </div>
                     <div className="border border-purple-400/30 p-4">
-                    <div className="text-2xl font-mono font-bold text-purple-400">6</div>
+                    <div className="text-2xl font-mono font-bold text-purple-400">2</div>
                     <div className="text-sm text-gray-400 font-mono">YEARS</div>
                     </div>
                     <div className="border border-cyan-400/30 p-4">
@@ -38,8 +38,8 @@ export const About: React.FC = () => {
                     <div className="text-sm text-gray-400 font-mono">CONTRIBUTIONS</div>
                     </div>
                     <div className="border border-purple-400/30 p-4">
-                    <div className="text-2xl font-mono font-bold text-purple-400">100%</div>
-                    <div className="text-sm text-gray-400 font-mono">DEDICACIÓN</div>
+                    <div className="text-2xl font-mono font-bold text-purple-400">12</div>
+                    <div className="text-sm text-gray-400 font-mono">LENGUAJES</div>
                     </div>
                 </div>
                 </div>

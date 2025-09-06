@@ -12,17 +12,17 @@ export const NAV_ITEMS: NavItem[] = [
 export const SKILL_CATEGORIES: SkillCategory[] = [
     {
         title: "FRONTEND",
-        skills: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+        skills: ["React", "Vite", "Next.js", "TypeScript", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
         color: "cyan"
     },
     {
         title: "BACKEND", 
-        skills: ["Node.js", "Express", "Python", "SQL"],
+        skills: ["Node.js", "GO", "Python", "SQL", "REST APIs", "nosql"],
         color: "purple"
     },
     {
         title: "TOOLS",
-        skills: ["Git", "Docker", "MongoDB", "Visual Studio Code", "Linux"],
+        skills: ["Git", "Docker", "Workbench sql", "Visual Studio Code", "Linux", "Postman", "Figma", "MongoDB", "nvim"],
         color: "cyan"
     }
 ];

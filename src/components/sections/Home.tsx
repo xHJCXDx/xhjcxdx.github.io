@@ -22,15 +22,15 @@ export const Home: React.FC = () => {
         {/* Animated background elements */}
         <div className="absolute inset-0">
             <div className="absolute top-1/4 left-1/4 w-32 h-32 border border-purple-500/30 rotate-45 animate-pulse"></div>
-            <div className="absolute bottom-1/3 right-1/4 w-24 h-24 border border-cyan-400/30 rotate-12 animate-bounce"></div>
+            <div className="absolute bottom-1/2 right-1/4 w-24 h-24 border border-cyan-400/30 rotate-12 animate-bounce"></div>
             <div className="absolute top-1/2 right-1/3 w-16 h-16 bg-purple-600/20 rotate-45"></div>
         </div>
 
         <div className="text-center z-10">
             <div className="mb-8">
-            <div className="w-32 h-32 mx-auto mb-6 border-2 border-cyan-400 bg-gradient-to-r from-purple-600/30 to-cyan-600/30 flex items-center justify-center">
-                <div className="w-20 h-20 border border-purple-400 rotate-45 bg-purple-500/20"></div>
-            </div>
+                <div className="w-32 h-32 mx-auto mb-6 border-4 border-cyan-400 rounded-2xl bg-gradient-radial from-cyan-200 via-purple-100 to-cyan-200 flex items-center justify-center shadow-lg">
+                    <img src="/vite.svg" alt="Logo Vite" className="w-24 h-24 object-contain" />
+                </div>
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-white mb-4 text-center">
@@ -48,7 +48,7 @@ export const Home: React.FC = () => {
             <div className="px-4 sm:px-6 py-3 border border-cyan-500 bg-cyan-500/10 text-cyan-400 font-mono text-sm">
                 NODE.JS
             </div>
-            <div className="px-4 sm:px-6 py-3 border border-purple-500 bg-purple-500/10 text-purple-400 font-mono text-sm">
+            <div className="px-4 sm:px-6 py-3 border border-yellow-500 bg-yellow-500/10 text-yellow-400 font-mono text-sm">
                 PYTHON
             </div>
             </div>
