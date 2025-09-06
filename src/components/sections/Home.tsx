@@ -29,11 +29,7 @@ export const Home: React.FC = () => {
         <div className="text-center z-10">
             <div className="mb-8">
                 <div className="w-32 h-32 mx-auto mb-6 border-4 border-cyan-400 rounded-2xl bg-gradient-radial from-cyan-200 via-purple-100 to-cyan-200 flex items-center justify-center shadow-lg">
-<<<<<<< HEAD
                     <img src="/logo.svg" alt="Logo Vite" className="w-24 h-24 object-contain" />
-=======
-                    <img src="public/logo.svg" alt="Logo Vite" className="w-24 h-24 object-contain" />
->>>>>>> 8436d3f0ff26d598cf3401af2d727539bce5d7f0
                 </div>
             </div>
             
