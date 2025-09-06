@@ -3,6 +3,40 @@ import { CONTACT_METHODS } from '@/constants/data';
 
 export const Contact: React.FC = () => {
     const [showForm, setShowForm] = useState(false);
+    const [result, setResult] = useState<string | null>(null);
+
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+        const form = event.currentTarget; // Store form reference
+        setResult("Sending....");
+        const formData = new FormData(form);
+
+        formData.append("access_key", "7512cf8a-36fc-42f8-af5a-42f6d4ba6c12");
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData,
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setResult("Form Submitted Successfully");
+                form.reset(); // Use the stored reference
+            } else {
+                console.log("Error", data);
+                setResult(data.message);
+            }
+        } catch (error) {
+            console.error("Error submitting form:", error);
+            setResult("An error occurred while submitting the form.");
+        }
+
+        setTimeout(() => {
+            setResult(null);
+        }, 5000);
+    };
 
     return (
         <section className="min-h-screen py-20 px-6">
@@ -49,18 +83,18 @@ export const Contact: React.FC = () => {
                 </button>
                 </>
             ) : (
-                <form className="text-left">
+                <form className="text-left" onSubmit={handleSubmit}>
                     <div className="mb-4">
                         <label htmlFor="name" className="block text-cyan-400 font-mono mb-2">NAME:</label>
-                        <input type="text" id="name" className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
+                        <input type="text" id="name" name="name" required className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
                     </div>
                     <div className="mb-4">
                         <label htmlFor="email" className="block text-cyan-400 font-mono mb-2">EMAIL:</label>
-                        <input type="email" id="email" className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
+                        <input type="email" id="email" name="email" required className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
                     </div>
                     <div className="mb-4">
                         <label htmlFor="message" className="block text-cyan-400 font-mono mb-2">MESSAGE:</label>
-                        <textarea id="message" rows={4} className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400"></textarea>
+                        <textarea id="message" name="message" required rows={4} className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400"></textarea>
                     </div>
                     <div className="flex justify-end gap-4">
                         <button 
@@ -77,6 +111,7 @@ export const Contact: React.FC = () => {
                             SEND MESSAGE
                         </button>
                     </div>
+                    {result && <p className="mt-4 text-center font-mono text-cyan-400">{result}</p>}
                 </form>
             )}
             </div>

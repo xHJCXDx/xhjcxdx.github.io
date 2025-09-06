@@ -12,23 +12,23 @@ export const NAV_ITEMS: NavItem[] = [
 export const SKILL_CATEGORIES: SkillCategory[] = [
     {
         title: "FRONTEND",
-        skills: ["React", "Vite", "Next.js", "TypeScript", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
+        skills: ["React", "Vite", "Next.js", "TypeScript", "HTML", "CSS", "JavaScript"],
         color: "cyan"
     },
     {
         title: "BACKEND", 
-        skills: ["Node.js", "GO", "Python", "SQL", "REST APIs", "nosql"],
+        skills: ["Node.js", "GO", "Python", "SQL", "nosql"],
         color: "purple"
     },
     {
         title: "TOOLS",
-        skills: ["Git", "Docker", "Workbench sql", "Visual Studio Code", "Linux", "Postman", "Figma", "MongoDB", "nvim"],
+        skills: ["Docker", "Workbench sql", "MongoDB", "Visual Studio Code", "Linux", "nvim"],
         color: "cyan"
     }
 ];
 
 export const PROJECTS: Project[] = [
-    {
+    /*{
         title: "Painting SME",
         tech: "React • Node.js • SQL",
         description: "Website for the paint trade (SME).",
@@ -51,7 +51,7 @@ export const PROJECTS: Project[] = [
         status: "UNDER DEVELOPMENT",
         projectUrl: "",
         githubUrl:""
-    },
+    },*/
     {
         title: "CPhysics",
         tech: "Python",
@@ -64,10 +64,10 @@ export const PROJECTS: Project[] = [
 
 export const CONTACT_METHODS: ContactMethod[] = [
     {
-        href: "mailto:legado1x@email.com",
+        href: "mailto:legado1x@gmail.com",
         icon: Mail,
         title: "EMAIL",
-        subtitle: "legado1x@email.com",
+        subtitle: "legado1x@gmail.com",
         color: "yellow"
     },
     {
