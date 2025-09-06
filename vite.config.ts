@@ -7,7 +7,7 @@ const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
 
 export default defineConfig({
-  base: '/Portfolio_hjcxd/',
+  base: '/xhjcxdx.github.io/',
   plugins: [react()],
   resolve: {
     alias: {
