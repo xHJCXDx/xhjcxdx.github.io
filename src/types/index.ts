@@ -1,5 +1,7 @@
 import { LucideIcon } from 'lucide-react'; 
 
+type TailwindColor = 'cyan' | 'purple' | 'yellow' | 'blue' | 'green' | 'red' | 'indigo' | 'pink' | 'orange';
+
 export interface NavItem {
     id: string;
     label: string;
@@ -9,7 +11,7 @@ export interface NavItem {
 export interface SkillCategory {
     title: string;
     skills: string[];
-    color: 'cyan' | 'purple';
+    color: TailwindColor;
 }
 
 export interface Project {
@@ -28,5 +30,5 @@ export interface ContactMethod {
     icon: LucideIcon;
     title: string;
     subtitle: string;
-    color: 'cyan' | 'purple' | 'yellow';
+    color: TailwindColor;
 }

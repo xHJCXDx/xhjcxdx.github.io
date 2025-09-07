@@ -38,7 +38,7 @@ export const About: React.FC = () => {
                     <div className="text-sm text-gray-400 font-mono">INPUT</div>
                     </div>
                     <div className="border border-purple-400/30 p-4">
-                    <div className="text-2xl font-mono font-bold text-purple-400">5</div>
+                    <div className="text-2xl font-mono font-bold text-purple-400">6</div>
                     <div className="text-sm text-gray-400 font-mono">LENGUAJES</div>
                     </div>
                 </div>

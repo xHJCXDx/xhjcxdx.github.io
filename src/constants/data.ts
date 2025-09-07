@@ -1,4 +1,4 @@
-import { User, Zap, Briefcase, Send, Mail, Linkedin, Github } from 'lucide-react';
+import { User, Zap, Briefcase, Send, Linkedin, Github, Code } from 'lucide-react';
 import type { NavItem, SkillCategory, Project, ContactMethod } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
@@ -11,19 +11,29 @@ export const NAV_ITEMS: NavItem[] = [
 
 export const SKILL_CATEGORIES: SkillCategory[] = [
     {
+        title: "PLATFORM",
+        skills: ["Docker", "MongoDB"],
+        color: "red"
+    },
+    {
+        title: "FRAMEWORKS & LIBRARIES",
+        skills: ["React", "React Native", "tailwind "],
+        color: "pink"
+    },
+    {
+        title: "IDE",
+        skills: ["Android Studio","Visual Studio Code","IntelliJ IDEA"],
+        color: "orange"
+    },
+        {
         title: "FRONTEND",
-        skills: ["React", "Vite", "Next.js", "TypeScript", "HTML", "CSS", "JavaScript"],
+        skills: ["HTML", "CSS", "JavaScript"],
         color: "cyan"
     },
     {
         title: "BACKEND", 
-        skills: ["Node.js", "GO", "Python", "SQL", "nosql"],
+        skills: ["GO", "Python", "SQL", "MQL", "Java","TypeScript"],
         color: "purple"
-    },
-    {
-        title: "TOOLS",
-        skills: ["Docker", "Workbench sql", "MongoDB", "Visual Studio Code", "Linux", "nvim"],
-        color: "cyan"
     }
 ];
 
@@ -68,18 +78,11 @@ export const PROJECTS: Project[] = [
 
 export const CONTACT_METHODS: ContactMethod[] = [
     {
-        href: "mailto:legado1x@gmail.com",
-        icon: Mail,
-        title: "EMAIL",
-        subtitle: "legado1x@gmail.com",
-        color: "yellow"
-    },
-    {
-        href: "www.linkedin.com/in/hiro-julian-cruz-4737902ba",
+        href: "https://www.linkedin.com/in/hiro-cruz-4737902ba/",
         icon: Linkedin,
         title: "LINKEDIN",
-        subtitle: "/in/hiro-julian-cruz",
-        color: "purple"
+        subtitle: "Hiro",
+        color: "blue"
     },
     {
         href: "https://github.com/xHJCXDx",
@@ -87,5 +90,12 @@ export const CONTACT_METHODS: ContactMethod[] = [
         title: "GITHUB",
         subtitle: "xHJCXDx",
         color: "cyan"
+    },
+    {
+        href: "https://app.daily.dev/xhjcxdx",
+        icon: Code,
+        title: "Daily.dev",
+        subtitle: "@xhjcxdx",
+        color: "purple"
     }
 ];
