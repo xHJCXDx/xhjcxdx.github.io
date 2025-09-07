@@ -55,10 +55,14 @@ export const PROJECTS: Project[] = [
     {
         title: "CPhysics",
         tech: "Python",
-        description: "Sistema de chatbot inteligente con procesamiento de lenguaje natural y aprendizaje automático.",
+        description: "Desktop Tool for Computational Physics",
         status: "FILLED",
-        projectUrl: "https://github.com/xHJCXDx/CPhysics.git",
-        githubUrl:""
+        longDescription:"CPhysics is a desktop application developed in Python and PySide6, designed to solve computational physics problems. The tool offers an intuitive graphical interface that allows users to perform calculations and visualize data in various areas of physics, including kinematics, dynamics, thermodynamics, waves, and electromagnetism.\nThe project’s modular architecture facilitates interactive simulation and analysis of results through graphs generated with popular libraries like Matplotlib and Seaborn. This makes CPhysics an excellent resource for students and enthusiasts.",
+        images: [
+            "/projects/cphysics_1.png"
+        ],
+        //liveDemoUrl: "#", // Add your live demo link here
+        githubUrl: "https://github.com/xHJCXDx/CPhysics.git"
     } 
 ];
 
@@ -81,7 +85,7 @@ export const CONTACT_METHODS: ContactMethod[] = [
         href: "https://github.com/xHJCXDx",
         icon: Github,
         title: "GITHUB",
-        subtitle: "@xHJCXDx",
+        subtitle: "xHJCXDx",
         color: "cyan"
     }
 ];

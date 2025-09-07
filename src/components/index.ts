@@ -1,3 +1,3 @@
 export { Navbar } from './Navbar';
 export { Footer } from './Footer';
-export * from './sections'
+export * from './sections';

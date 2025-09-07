@@ -17,8 +17,10 @@ export interface Project {
     tech: string;
     description: string;
     status: 'FILLED' | 'UNDER DEVELOPMENT';
-    projectUrl: string;
     githubUrl: string;
+    longDescription: string;
+    images?: string[];
+    liveDemoUrl?: string;
 }
 
 export interface ContactMethod {
