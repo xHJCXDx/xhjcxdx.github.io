@@ -17,7 +17,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
     },
     {
         title: "FRAMEWORKS & LIBRARIES",
-        skills: ["React", "React Native", "tailwind "],
+        skills: ["React", "React Native", "Tailwind "],
         color: "pink"
     },
     {
