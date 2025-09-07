@@ -33,7 +33,7 @@ export const Home: React.FC = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-white mb-4 text-center">
-            Hiro <span className="text-cyan-400">DEV</span>
+            Hiro{/*<span className="text-cyan-400">DEV</span> */}
             </h1>
             
             <div className="text-lg sm:text-xl lg:text-2xl font-mono text-purple-400 mb-8 h-6 sm:h-8 text-center">

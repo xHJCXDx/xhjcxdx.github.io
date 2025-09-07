@@ -1,8 +1,8 @@
-import { User, Zap, Briefcase, Send, Linkedin, Github, Code } from 'lucide-react';
+import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play } from 'lucide-react';
 import type { NavItem, SkillCategory, Project, ContactMethod } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
-    { id: 'home', label: 'START', icon: User },
+    { id: 'home', label: 'START', icon: Play },
     { id: 'about', label: 'ABOUT', icon: User },
     { id: 'skills', label: 'SKILLS', icon: Zap },
     { id: 'projects', label: 'PROJECTS', icon: Briefcase },

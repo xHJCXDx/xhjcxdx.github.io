@@ -35,11 +35,11 @@ export const About: React.FC = () => {
                     </div>
                     <div className="border border-cyan-400/30 p-4">
                     <div className="text-2xl font-mono font-bold text-cyan-400">240+</div>
-                    <div className="text-sm text-gray-400 font-mono">INPUT</div>
+                    <div className="text-sm text-gray-400 font-mono">INPUTS</div>
                     </div>
                     <div className="border border-purple-400/30 p-4">
                     <div className="text-2xl font-mono font-bold text-purple-400">6</div>
-                    <div className="text-sm text-gray-400 font-mono">LENGUAJES</div>
+                    <div className="text-sm text-gray-400 font-mono">LANGUAGES</div>
                     </div>
                 </div>
                 </div>
