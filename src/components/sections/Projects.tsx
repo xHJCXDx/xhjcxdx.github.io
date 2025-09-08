@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Github } from 'lucide-react';
-import { PROJECTS } from '@/constants/data';
+import { PROJECTS, PROJECTS_TEXTS } from '@/constants/data';
 import { ProjectModal } from '@/components/ProjectModal'; // Corrected, direct import
 import type { Project } from '@/types';
 
@@ -19,7 +19,7 @@ export const Projects: React.FC = () => {
         <section className="min-h-screen py-20 px-6">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-4xl font-mono font-bold text-white mb-12 text-center border-b border-cyan-400 pb-4">
-                    PROJECTS
+                    {PROJECTS_TEXTS.title}
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -48,7 +48,7 @@ export const Projects: React.FC = () => {
                             
                             <div className="flex space-x-3 mt-auto">
                                 <button onClick={() => openModal(project)} className="flex-1 py-2 border border-purple-400 text-purple-400 font-mono text-sm hover:bg-purple-400/10 transition-all text-center">
-                                    SEE PROJECT
+                                    {PROJECTS_TEXTS.seeProject}
                                 </button>
                                 <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="p-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition-all">
                                     <Github size={16} />

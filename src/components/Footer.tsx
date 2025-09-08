@@ -1,4 +1,5 @@
 import React from 'react';
+import { FOOTER_TEXTS } from '@/constants/data';
 
 export const Footer: React.FC = () => {
     return (
@@ -10,7 +11,7 @@ export const Footer: React.FC = () => {
                 <div className="w-6 h-6 border border-purple-400 bg-purple-600/35 rotate-45 bg-cyan-600/20"></div>
             </div> */}
             <div className="font-mono text-gray-400 text-sm">
-            © 2025 xHJCXDx Developer. All rights reserved.
+            {FOOTER_TEXTS.copyright}
             </div>
         </div>
         </footer>

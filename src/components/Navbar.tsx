@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { NAV_ITEMS } from '@/constants/data';
+import { NAV_ITEMS, NAVBAR_TEXTS } from '@/constants/data';
 
 interface NavbarProps {
     activeSection: string;
@@ -23,7 +23,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-cyan-400 overflow-hidden flex items-center justify-center">
                     <img src="/logo.svg" alt="Logo Vite" className="w-full h-full object-cover rotate-[deg]" />
                 </div>
-                <span className="text-cyan-400 font-mono text-sm sm:text-lg font-bold">xHJCXDx</span>
+                <span className="text-cyan-400 font-mono text-sm sm:text-lg font-bold">{NAVBAR_TEXTS.logo}</span>
             </div>
 
             {/* Desktop Navigation */}
