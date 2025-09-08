@@ -32,7 +32,7 @@ export const Home: React.FC = () => {
                 </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-white mb-4 text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-black dark:text-white mb-4 text-center">
             Hiro{/*<span className="text-cyan-400">DEV</span> */}
             </h1>
             
@@ -52,8 +52,8 @@ export const Home: React.FC = () => {
             </div>
             </div>
 
-            <ChevronDown className="text-gray-400 animate-bounce mx-auto" size={32} />
-            <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
+            <ChevronDown className="text-gray-600 dark:text-gray-400 animate-bounce mx-auto" size={32} />
+            <div className="space-y-6 text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
                 <p>
                     &gt; The beauty of simplicity
                 </p>

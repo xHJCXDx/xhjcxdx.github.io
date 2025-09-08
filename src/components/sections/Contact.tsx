@@ -3,19 +3,19 @@ import { CONTACT_METHODS } from '@/constants/data';
 
 const colorClasses: { [key: string]: { container: string; text: string; } } = {
     yellow: {
-        container: 'border-yellow-400/50 bg-yellow-400/5 hover:bg-yellow-400/10',
+        container: 'border-yellow-400/50 bg-yellow-100/5 dark:bg-yellow-400/5 hover:bg-yellow-200/10 dark:hover:bg-yellow-400/10',
         text: 'text-yellow-400',
     },
     purple: {
-        container: 'border-purple-400/50 bg-purple-400/5 hover:bg-purple-400/10',
+        container: 'border-purple-400/50 bg-purple-100/5 dark:bg-purple-400/5 hover:bg-purple-200/10 dark:hover:bg-purple-400/10',
         text: 'text-purple-400',
     },
     cyan: {
-        container: 'border-cyan-400/50 bg-cyan-400/5 hover:bg-cyan-400/10',
+        container: 'border-cyan-400/50 bg-cyan-100/5 dark:bg-cyan-400/5 hover:bg-cyan-200/10 dark:hover:bg-cyan-400/10',
         text: 'text-cyan-400',
     },
     blue: {
-        container: 'border-blue-400/50 bg-blue-400/5 hover:bg-blue-400/10',
+        container: 'border-blue-400/50 bg-blue-100/5 dark:bg-blue-400/5 hover:bg-blue-200/10 dark:hover:bg-blue-400/10',
         text: 'text-blue-400',
     }
 };
@@ -60,18 +60,18 @@ export const Contact: React.FC = () => {
     return (
         <section className="min-h-screen py-20 px-6">
             <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-4xl font-mono font-bold text-white mb-12 border-b border-purple-400 pb-4">
+                <h2 className="text-4xl font-mono font-bold text-black dark:text-white mb-12 border-b border-gray-300 dark:border-purple-400 pb-4">
                 CONTACT
                 </h2>
                 
                 <div className="mb-12">
-                    <p className="text-xl font-mono text-gray-300 mb-8">
+                    <p className="text-xl font-mono text-gray-700 dark:text-gray-300 mb-8">
                         &gt; Got something on your mind? <span className="text-cyan-400">Let's create together.</span>
                     </p>
-                    <p className="text-xl font-mono text-gray-300 mb-8">
+                    <p className="text-xl font-mono text-gray-700 dark:text-gray-300 mb-8">
                         &gt; Going through problems? <span className="text-cyan-400">I'll solve them for you.</span>
                     </p>
-                    <p className="text-xl font-mono text-gray-300 mb-8">
+                    <p className="text-xl font-mono text-gray-700 dark:text-gray-300 mb-8">
                         &gt; Need a hand? <span className="text-cyan-400">I'll give you two.</span>
                     </p>
                     
@@ -83,7 +83,7 @@ export const Contact: React.FC = () => {
                                     <div className={`border p-6 transition-all ${classes.container}`}>
                                         <Icon className={`mx-auto mb-4 ${classes.text}`} size={32} />
                                         <div className={`font-mono ${classes.text}`}>{title}</div>
-                                        <div className="font-mono text-gray-300 text-sm">{subtitle}</div>
+                                        <div className="font-mono text-gray-700 dark:text-gray-300 text-sm">{subtitle}</div>
                                     </div>
                                 </a>
                             );
@@ -91,15 +91,15 @@ export const Contact: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="border border-purple-500/50 p-8 bg-gradient-to-r from-purple-900/20 to-cyan-900/20">
+                <div className="border border-gray-300/50 dark:border-purple-500/50 p-8 bg-gradient-to-r from-purple-100/20 to-cyan-100/20 dark:from-purple-900/20 dark:to-cyan-900/20">
                 {!showForm ? (
                     <>
-                        <div className="text-2xl font-mono text-white mb-4">
+                        <div className="text-2xl font-mono text-black dark:text-white mb-4">
                             READY TO <span className="text-cyan-400">COLLABORATE</span>?
                         </div>
                         <button 
                             onClick={() => setShowForm(true)}
-                            className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-mono hover:bg-cyan-400 hover:text-black transition-all duration-300"
+                            className="px-8 py-3 border-2 border-gray-500 text-gray-500 dark:border-cyan-400 dark:text-cyan-400 font-mono hover:bg-gray-200 hover:text-black dark:hover:bg-cyan-400 dark:hover:text-black transition-all duration-300"
                         >
                             START PROJECT
                         </button>
@@ -108,15 +108,15 @@ export const Contact: React.FC = () => {
                     <form className="text-left" onSubmit={handleSubmit}>
                         <div className="mb-4">
                             <label htmlFor="name" className="block text-cyan-400 font-mono mb-2">NAME:</label>
-                            <input type="text" id="name" name="name" required className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
+                            <input type="text" id="name" name="name" required className="w-full bg-gray-100/50 text-black dark:bg-black/50 dark:text-white p-2 focus:outline-none border border-gray-300/50 dark:border-purple-400/50 focus:border-cyan-400" />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="email" className="block text-cyan-400 font-mono mb-2">EMAIL:</label>
-                            <input type="email" id="email" name="email" required className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
+                            <input type="email" id="email" name="email" required className="w-full bg-gray-100/50 text-black dark:bg-black/50 dark:text-white p-2 focus:outline-none border border-gray-300/50 dark:border-purple-400/50 focus:border-cyan-400" />
                         </div>
                         <div className="mb-4">
                             <label htmlFor="message" className="block text-cyan-400 font-mono mb-2">MESSAGE:</label>
-                            <textarea id="message" name="message" required rows={4} className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400"></textarea>
+                            <textarea id="message" name="message" required rows={4} className="w-full bg-gray-100/50 text-black dark:bg-black/50 dark:text-white p-2 focus:outline-none border border-gray-300/50 dark:border-purple-400/50 focus:border-cyan-400"></textarea>
                         </div>
                         <div className="flex justify-end gap-4">
                             <button 

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NAV_ITEMS } from '@/constants/data';
+import ThemeToggle from './ThemeToggle';
 
 interface NavbarProps {
     activeSection: string;
@@ -15,7 +16,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-purple-500/30">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-gray-200/30 dark:border-purple-500/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -24,6 +25,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                     <img src="/logo.svg" alt="Logo Vite" className="w-full h-full object-cover rotate-[deg]" />
                 </div>
                 <span className="text-cyan-400 font-mono text-sm sm:text-lg font-bold">xHJCXDx</span>
+                <ThemeToggle />
             </div>
 
             {/* Desktop Navigation */}

@@ -6,10 +6,10 @@ export const About: React.FC = () => {
         <div className="max-w-6xl mx-auto">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-                <h2 className="text-4xl font-mono font-bold text-white mb-8 border-b border-cyan-400 pb-4">
+                <h2 className="text-4xl font-mono font-bold text-black dark:text-white mb-8 border-b border-gray-300 dark:border-cyan-400 pb-4">
                 ABOUT
                 </h2>
-                <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
+                <div className="space-y-6 text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
                 <p>
                     &gt; Technical Student in Programming.
                 </p>
@@ -23,23 +23,23 @@ export const About: React.FC = () => {
             </div>
             
             <div className="relative">
-                <div className="border-2 border-purple-500/50 p-8 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+                <div className="border-2 border-gray-300/50 dark:border-purple-500/50 p-8 bg-gradient-to-br from-purple-100/20 to-cyan-100/20 dark:from-purple-900/20 dark:to-cyan-900/20">
                 <div className="grid grid-cols-2 gap-4 text-center">
-                    <div className="border border-cyan-400/30 p-4">
+                    <div className="border border-gray-300/30 dark:border-cyan-400/30 p-4">
                     <div className="text-2xl font-mono font-bold text-cyan-400">6</div>
-                    <div className="text-sm text-gray-400 font-mono">PROJECTS</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 font-mono">PROJECTS</div>
                     </div>
-                    <div className="border border-purple-400/30 p-4">
+                    <div className="border border-gray-300/30 dark:border-purple-400/30 p-4">
                     <div className="text-2xl font-mono font-bold text-purple-400">2</div>
-                    <div className="text-sm text-gray-400 font-mono">YEARS</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 font-mono">YEARS</div>
                     </div>
-                    <div className="border border-cyan-400/30 p-4">
+                    <div className="border border-gray-300/30 dark:border-cyan-400/30 p-4">
                     <div className="text-2xl font-mono font-bold text-cyan-400">240+</div>
-                    <div className="text-sm text-gray-400 font-mono">INPUTS</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 font-mono">INPUTS</div>
                     </div>
-                    <div className="border border-purple-400/30 p-4">
+                    <div className="border border-gray-300/30 dark:border-purple-400/30 p-4">
                     <div className="text-2xl font-mono font-bold text-purple-400">6</div>
-                    <div className="text-sm text-gray-400 font-mono">LANGUAGES</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400 font-mono">LANGUAGES</div>
                     </div>
                 </div>
                 </div>
