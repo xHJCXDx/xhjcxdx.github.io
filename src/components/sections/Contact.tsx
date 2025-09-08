@@ -1,24 +1,6 @@
 import React, { useState } from 'react';
 import { CONTACT_METHODS } from '@/constants/data';
-
-const colorClasses: { [key: string]: { container: string; text: string; } } = {
-    yellow: {
-        container: 'border-yellow-400/50 bg-yellow-400/5 hover:bg-yellow-400/10',
-        text: 'text-yellow-400',
-    },
-    purple: {
-        container: 'border-purple-400/50 bg-purple-400/5 hover:bg-purple-400/10',
-        text: 'text-purple-400',
-    },
-    cyan: {
-        container: 'border-cyan-400/50 bg-cyan-400/5 hover:bg-cyan-400/10',
-        text: 'text-cyan-400',
-    },
-    blue: {
-        container: 'border-blue-400/50 bg-blue-400/5 hover:bg-blue-400/10',
-        text: 'text-blue-400',
-    }
-};
+import { colorClasses } from '@/constants/styles';
 
 export const Contact: React.FC = () => {
     const [showForm, setShowForm] = useState(false);
@@ -81,8 +63,8 @@ export const Contact: React.FC = () => {
                             return (
                                 <a key={title} href={href} className="group">
                                     <div className={`border p-6 transition-all ${classes.container}`}>
-                                        <Icon className={`mx-auto mb-4 ${classes.text}`} size={32} />
-                                        <div className={`font-mono ${classes.text}`}>{title}</div>
+                                        <Icon className={`mx-auto mb-4 ${classes.title}`} size={32} />
+                                        <div className={`font-mono ${classes.title}`}>{title}</div>
                                         <div className="font-mono text-gray-300 text-sm">{subtitle}</div>
                                     </div>
                                 </a>
