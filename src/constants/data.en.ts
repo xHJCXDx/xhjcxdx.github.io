@@ -145,7 +145,7 @@ export const CONTACT_TEXTS = {
 };
 
 export const PROJECT_MODAL_TEXTS = {
-    screenshots: "Screenshots",
+    screenshots: "Images",
     technologies: "Technologies",
     liveDemo: "SEE LIVE DEMO",
     viewCode: "VIEW CODE"

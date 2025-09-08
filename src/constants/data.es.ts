@@ -144,7 +144,7 @@ export const CONTACT_TEXTS = {
 };
 
 export const PROJECT_MODAL_TEXTS = {
-    screenshots: "Capturas de Pantalla",
+    screenshots: "Imágenes",
     technologies: "Tecnologías",
     liveDemo: "VER DEMO EN VIVO",
     viewCode: "VER CÓDIGO"
