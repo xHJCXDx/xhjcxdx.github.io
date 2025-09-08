@@ -61,7 +61,7 @@ export const Contact: React.FC = () => {
         <section className="min-h-screen py-20 px-6">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-4xl font-mono font-bold text-white mb-12 border-b border-purple-400 pb-4">
-                CONTACT.EXE
+                CONTACT
                 </h2>
                 
                 <div className="mb-12">

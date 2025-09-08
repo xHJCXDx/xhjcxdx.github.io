@@ -19,7 +19,7 @@ export const Projects: React.FC = () => {
         <section className="min-h-screen py-20 px-6">
             <div className="max-w-6xl mx-auto">
                 <h2 className="text-4xl font-mono font-bold text-white mb-12 text-center border-b border-cyan-400 pb-4">
-                    PROJECTS.EXE
+                    PROJECTS
                 </h2>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

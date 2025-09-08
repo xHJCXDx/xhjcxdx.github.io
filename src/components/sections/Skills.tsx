@@ -55,7 +55,7 @@ export const Skills: React.FC = () => {
         <section className="min-h-screen py-20 px-6">
         <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-mono font-bold text-white mb-12 text-center border-b border-purple-400 pb-4">
-            SKILLS.EXE
+            SKILLS
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

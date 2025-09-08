@@ -7,7 +7,7 @@ export const About: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 className="text-4xl font-mono font-bold text-white mb-8 border-b border-cyan-400 pb-4">
-                ABOUT.EXE
+                ABOUT
                 </h2>
                 <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
                 <p>
