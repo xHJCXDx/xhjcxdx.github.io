@@ -1,7 +1,7 @@
 import React from 'react';
 import { X, Github } from 'lucide-react';
 import type { Project } from '@/types';
-import { PROJECT_MODAL_TEXTS } from '@/constants/data';
+import { useLanguage } from '@/context/LanguageContext';
 
 interface ProjectModalProps {
   project: Project;
@@ -9,6 +9,7 @@ interface ProjectModalProps {
 }
 
 export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+  const { texts } = useLanguage();
   if (!project) return null;
 
   return (
@@ -28,7 +29,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
         {project.images && project.images.length > 0 && (
           <div className="mb-6">
-            <h3 className="text-xl text-purple-400 mb-4">{PROJECT_MODAL_TEXTS.screenshots}</h3>
+            <h3 className="text-xl text-purple-400 mb-4">{texts.PROJECT_MODAL_TEXTS.screenshots}</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {project.images.map((img, index) => (
                 <img key={index} src={img} alt={`${project.title} screenshot ${index + 1}`} className="w-full h-auto rounded-md border-2 border-purple-500/30" />
@@ -38,19 +39,19 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         )}
 
         <div className="mb-6">
-            <h3 className="text-xl text-purple-400 mb-2">{PROJECT_MODAL_TEXTS.technologies}</h3>
+            <h3 className="text-xl text-purple-400 mb-2">{texts.PROJECT_MODAL_TEXTS.technologies}</h3>
             <p className="text-cyan-400">{project.tech}</p>
         </div>
 
         <div className="flex space-x-4 mt-8">
           {project.liveDemoUrl && (
             <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-purple-400 text-purple-400 hover:bg-purple-400/10 transition-all text-center">
-              {PROJECT_MODAL_TEXTS.liveDemo}
+              {texts.PROJECT_MODAL_TEXTS.liveDemo}
             </a>
           )}
           <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition-all text-center flex justify-center items-center gap-2">
             <Github size={16} />
-            <span>{PROJECT_MODAL_TEXTS.viewCode}</span>
+            <span>{texts.PROJECT_MODAL_TEXTS.viewCode}</span>
           </a>
         </div>
       </div>

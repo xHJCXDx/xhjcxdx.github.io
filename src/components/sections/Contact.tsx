@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
-import { CONTACT_METHODS, CONTACT_TEXTS } from '@/constants/data';
+import { useLanguage } from '@/context/LanguageContext';
 import { colorClasses } from '@/constants/styles';
 
 export const Contact: React.FC = () => {
+    const { texts } = useLanguage();
     const [showForm, setShowForm] = useState(false);
     const [result, setResult] = useState<string | null>(null);
 
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         const form = event.currentTarget;
-        setResult(CONTACT_TEXTS.form.sending);
+        setResult(texts.CONTACT_TEXTS.form.sending);
         const formData = new FormData(form);
 
         formData.append("access_key", "7512cf8a-36fc-42f8-af5a-42f6d4ba6c12");
@@ -23,7 +24,7 @@ export const Contact: React.FC = () => {
             const data = await response.json();
 
             if (data.success) {
-                setResult(CONTACT_TEXTS.form.success);
+                setResult(texts.CONTACT_TEXTS.form.success);
                 form.reset();
             } else {
                 console.log("Error", data);
@@ -31,7 +32,7 @@ export const Contact: React.FC = () => {
             }
         } catch (error) {
             console.error("Error submitting form:", error);
-            setResult(CONTACT_TEXTS.form.error);
+            setResult(texts.CONTACT_TEXTS.form.error);
         }
 
         setTimeout(() => {
@@ -43,18 +44,18 @@ export const Contact: React.FC = () => {
         <section className="min-h-screen py-20 px-6">
             <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-4xl font-mono font-bold text-white mb-12 border-b border-purple-400 pb-4">
-                {CONTACT_TEXTS.title}
+                {texts.CONTACT_TEXTS.title}
                 </h2>
                 
                 <div className="mb-12">
-                    {CONTACT_TEXTS.quotes.map((quote, index) => (
+                    {texts.CONTACT_TEXTS.quotes.map((quote, index) => (
                         <p key={index} className="text-xl font-mono text-gray-300 mb-8">
                             {quote.text} <span className="text-cyan-400">{quote.highlight}</span>
                         </p>
                     ))}
                     
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                        {CONTACT_METHODS.map(({ href, icon: Icon, title, subtitle, color }) => {
+                        {texts.CONTACT_METHODS.map(({ href, icon: Icon, title, subtitle, color }) => {
                             const classes = colorClasses[color] || colorClasses.cyan;
                             return (
                                 <a key={title} href={href} className="group">
@@ -73,26 +74,26 @@ export const Contact: React.FC = () => {
                 {!showForm ? (
                     <>
                         <div className="text-2xl font-mono text-white mb-4">
-                            {CONTACT_TEXTS.collaboration.text} <span className="text-cyan-400">{CONTACT_TEXTS.collaboration.highlight}</span>
+                            {texts.CONTACT_TEXTS.collaboration.text} <span className="text-cyan-400">{texts.CONTACT_TEXTS.collaboration.highlight}</span>
                         </div>
                         <button 
                             onClick={() => setShowForm(true)}
                             className="px-8 py-3 border-2 border-cyan-400 text-cyan-400 font-mono hover:bg-cyan-400 hover:text-black transition-all duration-300"
                         >
-                            {CONTACT_TEXTS.startProject}
+                            {texts.CONTACT_TEXTS.startProject}
                         </button>
                     </>
                 ) : (
                     <form className="text-left" onSubmit={handleSubmit}>                        <div className="mb-4">
-                            <label htmlFor="name" className="block text-cyan-400 font-mono mb-2">{CONTACT_TEXTS.form.name}</label>
+                            <label htmlFor="name" className="block text-cyan-400 font-mono mb-2">{texts.CONTACT_TEXTS.form.name}</label>
                             <input type="text" id="name" name="name" required className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="email" className="block text-cyan-400 font-mono mb-2">{CONTACT_TEXTS.form.email}</label>
+                            <label htmlFor="email" className="block text-cyan-400 font-mono mb-2">{texts.CONTACT_TEXTS.form.email}</label>
                             <input type="email" id="email" name="email" required className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400" />
                         </div>
                         <div className="mb-4">
-                            <label htmlFor="message" className="block text-cyan-400 font-mono mb-2">{CONTACT_TEXTS.form.message}</label>
+                            <label htmlFor="message" className="block text-cyan-400 font-mono mb-2">{texts.CONTACT_TEXTS.form.message}</label>
                             <textarea id="message" name="message" required rows={4} className="w-full bg-black/50 border border-purple-400/50 text-white p-2 focus:outline-none focus:border-cyan-400"></textarea>
                         </div>
                         <div className="flex justify-end gap-4">
@@ -101,13 +102,13 @@ export const Contact: React.FC = () => {
                                 onClick={() => setShowForm(false)}
                                 className="px-6 py-2 border-2 border-gray-500 text-gray-400 font-mono hover:bg-gray-500 hover:text-white transition-all duration-300"
                             >
-                                {CONTACT_TEXTS.form.cancel}
+                                {texts.CONTACT_TEXTS.form.cancel}
                             </button>
                             <button 
                                 type="submit"
                                 className="px-6 py-2 border-2 border-cyan-400 text-cyan-400 font-mono hover:bg-cyan-400 hover:text-black transition-all duration-300"
                             >
-                                {CONTACT_TEXTS.form.send}
+                                {texts.CONTACT_TEXTS.form.send}
                             </button>
                         </div>
                         {result && <p className="mt-4 text-center font-mono text-cyan-400">{result}</p>}

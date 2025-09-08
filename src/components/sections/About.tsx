@@ -1,7 +1,9 @@
 import React from 'react';
-import { ABOUT_TEXTS } from '@/constants/data';
+import { useLanguage } from '@/context/LanguageContext';
 
 export const About: React.FC = () => {
+    const { texts } = useLanguage();
+
     const getStatColorClass = (color: string) => {
         switch (color) {
             case 'cyan':
@@ -28,10 +30,10 @@ export const About: React.FC = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
                 <h2 className="text-4xl font-mono font-bold text-white mb-8 border-b border-cyan-400 pb-4">
-                {ABOUT_TEXTS.title}
+                {texts.ABOUT_TEXTS.title}
                 </h2>
                 <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
-                {ABOUT_TEXTS.description.map((text, index) => (
+                {texts.ABOUT_TEXTS.description.map((text, index) => (
                     <p key={index}>{text}</p>
                 ))}
                 </div>
@@ -40,7 +42,7 @@ export const About: React.FC = () => {
             <div className="relative">
                 <div className="border-2 border-purple-500/50 p-8 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
                 <div className="grid grid-cols-2 gap-4 text-center">
-                    {ABOUT_TEXTS.stats.map((stat) => {
+                    {texts.ABOUT_TEXTS.stats.map((stat) => {
                         const colors = getStatColorClass(stat.color);
                         return (
                             <div key={stat.label} className={`border ${colors.border} p-4`}>

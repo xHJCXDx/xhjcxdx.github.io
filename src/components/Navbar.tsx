@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { NAV_ITEMS, NAVBAR_TEXTS } from '@/constants/data';
+import { useLanguage } from '@/context/LanguageContext';
+import { LanguageSelector } from './LanguageSelector';
 
 interface NavbarProps {
     activeSection: string;
@@ -8,6 +9,7 @@ interface NavbarProps {
 
 export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection }) => {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const { texts } = useLanguage();
 
     const handleNavClick = (id: string) => {
         setActiveSection(id);
@@ -23,12 +25,12 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-cyan-400 overflow-hidden flex items-center justify-center">
                     <img src="/logo.svg" alt="Logo Vite" className="w-full h-full object-cover rotate-[deg]" />
                 </div>
-                <span className="text-cyan-400 font-mono text-sm sm:text-lg font-bold">{NAVBAR_TEXTS.logo}</span>
+                <span className="text-cyan-400 font-mono text-sm sm:text-lg font-bold">{texts.NAVBAR_TEXTS.logo}</span>
             </div>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex space-x-6 xl:space-x-8">
-                {NAV_ITEMS.map(({ id, label, icon: Icon }) => (
+            <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
+                {texts.NAV_ITEMS.map(({ id, label, icon: Icon }) => (
                 <button
                     key={id}
                     onClick={() => handleNavClick(id)}
@@ -42,6 +44,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                     <span>{label}</span>
                 </button>
                 ))}
+                <LanguageSelector />
             </div>
 
             {/* Mobile menu button */}
@@ -63,10 +66,10 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
 
             {/* Mobile Navigation Menu */}
             <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
-            isMobileMenuOpen ? 'max-h-80 opacity-100' : 'max-h-0 opacity-0'
+            isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
             }`}>
             <div className="py-4 space-y-2 border-t border-purple-500/30 mt-4">
-                {NAV_ITEMS.map(({ id, label, icon: Icon }) => (
+                {texts.NAV_ITEMS.map(({ id, label, icon: Icon }) => (
                 <button
                     key={id}
                     onClick={() => handleNavClick(id)}
@@ -80,6 +83,9 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                     <span>{label}</span>
                 </button>
                 ))}
+                <div className="pt-4">
+                    <LanguageSelector />
+                </div>
             </div>
             </div>
         </div>

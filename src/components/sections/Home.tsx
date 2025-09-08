@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { HOME_TEXTS } from '@/constants/data';
+import { useLanguage } from '@/context/LanguageContext';
 
 export const Home: React.FC = () => {
+    const { texts } = useLanguage();
     const [displayText, setDisplayText] = useState('');
-    const fullText = HOME_TEXTS.title;
+    const fullText = texts.HOME_TEXTS.title;
 
     useEffect(() => {
         let i = 0;
@@ -47,7 +48,7 @@ export const Home: React.FC = () => {
             </div>
             
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-white mb-4 text-center">
-            {HOME_TEXTS.name}{/*<span className="text-cyan-400">DEV</span> */}
+            {texts.HOME_TEXTS.name}{/*<span className="text-cyan-400">DEV</span> */}
             </h1>
             
             <div className="text-lg sm:text-xl lg:text-2xl font-mono text-purple-400 mb-8 h-6 sm:h-8 text-center">
@@ -55,7 +56,7 @@ export const Home: React.FC = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
-            {HOME_TEXTS.tech.map((tech) => (
+            {texts.HOME_TEXTS.tech.map((tech) => (
                 <div key={tech.name} className={`px-4 sm:px-6 py-3 border ${getTechColorClass(tech.color)} font-mono text-sm`}>
                     {tech.name}
                 </div>
@@ -65,7 +66,7 @@ export const Home: React.FC = () => {
             <ChevronDown className="text-gray-400 animate-bounce mx-auto" size={32} />
             <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
                 <p>
-                    {HOME_TEXTS.quote}
+                    {texts.HOME_TEXTS.quote}
                 </p>
             </div>
         </div>

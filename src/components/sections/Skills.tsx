@@ -1,17 +1,19 @@
 import React from 'react';
-import { SKILL_CATEGORIES, SKILLS_TEXTS } from '@/constants/data';
+import { useLanguage } from '@/context/LanguageContext';
 import { colorClasses } from '@/constants/styles';
 
 export const Skills: React.FC = () => {
+    const { texts } = useLanguage();
+
     return (
         <section className="min-h-screen py-20 px-6">
         <div className="max-w-6xl mx-auto">
             <h2 className="text-4xl font-mono font-bold text-black dark:text-white mb-12 text-center border-b border-gray-300 dark:border-purple-400 pb-4">
-            {SKILLS_TEXTS.title}
+            {texts.SKILLS_TEXTS.title}
             </h2>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {SKILL_CATEGORIES.map(({ title, skills, color }) => {
+            {texts.SKILL_CATEGORIES.map(({ title, skills, color }) => {
                 const classes = colorClasses[color] || colorClasses.cyan;
                 return (
                     <div key={title} className={`border-2 p-6 bg-gradient-to-b to-black/50 ${classes.container}`}>

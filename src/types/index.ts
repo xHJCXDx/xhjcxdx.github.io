@@ -18,7 +18,7 @@ export interface Project {
     title: string;
     tech: string;
     description: string;
-    status: 'FILLED' | 'UNDER DEVELOPMENT';
+    status: 'FILLED' | 'UNDER DEVELOPMENT' | 'COMPLETADO' | 'EN DESARROLLO';
     githubUrl: string;
     longDescription: string;
     images?: string[];
