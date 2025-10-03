@@ -120,10 +120,6 @@ export const CONTACT_TEXTS = {
         {
             text: "> ¿Atravesando problemas? ",
             highlight: "Yo los resolveré por ti."
-        },
-        {
-            text: "> ¿Necesitas una mano? ",
-            highlight: "Te daré dos."
         }
     ],
     collaboration: {

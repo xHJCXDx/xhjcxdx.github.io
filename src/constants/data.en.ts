@@ -121,10 +121,6 @@ export const CONTACT_TEXTS = {
         {
             text: "> Going through problems? ",
             highlight: "I'll solve them for you."
-        },
-        {
-            text: "> Need a hand? ",
-            highlight: "I'll give you two."
         }
     ],
     collaboration: {
