@@ -1,19 +1,23 @@
 import { LucideIcon } from 'lucide-react'; 
 
+// Tailwind colors
 type TailwindColor = 'cyan' | 'purple' | 'yellow' | 'blue' | 'green' | 'red' | 'indigo' | 'pink' | 'orange';
 
+// Types
 export interface NavItem {
     id: string;
     label: string;
     icon: LucideIcon;
 }
 
+// Skill category
 export interface SkillCategory {
     title: string;
     skills: string[];
     color: TailwindColor;
 }
 
+// Project
 export interface Project {
     title: string;
     tech: string;
@@ -25,6 +29,7 @@ export interface Project {
     liveDemoUrl?: string;
 }
 
+// Contact method
 export interface ContactMethod {
     href: string;
     icon: LucideIcon;

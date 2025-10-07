@@ -23,7 +23,6 @@ const App: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      {/* Background grid effect */}
       <div className="fixed inset-0 opacity-10 pointer-events-none">
         <div 
           className="absolute inset-0" 

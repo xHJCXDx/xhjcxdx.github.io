@@ -2,6 +2,8 @@ import React, { createContext, useState, useContext, useEffect } from 'react';
 import * as en from '@/constants/data.en';
 import * as es from '@/constants/data.es';
 
+// Translations
+
 const translations = { en, es };
 
 type Language = 'en' | 'es';
