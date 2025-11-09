@@ -67,3 +67,53 @@ export default tseslint.config([
   },
 ])
 ```
+
+//Instalacion de depencdencias y copilacion 
+
+1. **Instala las dependencias** (si aún no lo has hecho):
+   ```bash
+   npm install
+   ```
+
+2. **Inicia el servidor de desarrollo**:
+   ```bash
+   npm run dev
+   ```
+
+3. **Para producción**:
+   ```bash
+   npm run build
+   npm run preview
+   ```
+
+//Solucion de problemas de permisos
+1. **Instala TypeScript globalmente** (si no lo has hecho):
+   ```bash
+   npm install -g typescript
+   ```
+
+2. **O instálalo como dependencia de desarrollo** (recomendado):
+   ```bash
+   npm install --save-dev typescript
+   ```
+
+3. **Limpia la caché de npm**:
+   ```bash
+   npm cache clean --force
+   ```
+
+4. **Vuelve a instalar las dependencias**:
+   ```bash
+   rm -rf node_modules package-lock.json
+   npm install
+   ```
+
+5. **Intenta construir de nuevo**:
+   ```bash
+   npm run build
+   ```
+
+Si el problema persiste, podrías intentar ejecutar directamente Vite sin TypeScript:
+```bash
+npx vite build
+```
