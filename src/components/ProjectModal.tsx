@@ -43,17 +43,21 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             <p className="text-cyan-400">{project.tech}</p>
         </div>
 
-        <div className="flex space-x-4 mt-8">
-          {project.liveDemoUrl && (
-            <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-purple-400 text-purple-400 hover:bg-purple-400/10 transition-all text-center">
-              {texts.PROJECT_MODAL_TEXTS.liveDemo}
-            </a>
-          )}
-          <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition-all text-center flex justify-center items-center gap-2">
-            <Github size={16} />
-            <span>{texts.PROJECT_MODAL_TEXTS.viewCode}</span>
-          </a>
-        </div>
+        {(project.liveDemoUrl || project.githubUrl) && (
+          <div className="flex space-x-4 mt-8">
+            {project.liveDemoUrl && (
+              <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-purple-400 text-purple-400 hover:bg-purple-400/10 transition-all text-center">
+                {texts.PROJECT_MODAL_TEXTS.liveDemo}
+              </a>
+            )}
+            {project.githubUrl && (
+              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 transition-all text-center flex justify-center items-center gap-2">
+                <Github size={16} />
+                <span>{texts.PROJECT_MODAL_TEXTS.viewCode}</span>
+              </a>
+            )}
+          </div>
+        )}
       </div>
     </div>
   );
