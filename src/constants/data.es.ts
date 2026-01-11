@@ -12,7 +12,7 @@ export const NAV_ITEMS: NavItem[] = [
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "PLATAFORMA",
-    skills: ["Docker", "MongoDB"],
+    skills: ["Docker", "MongoDB", "N8N"],
     color: "red"
   },
   {
@@ -22,7 +22,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "IDE",
-    skills: ["Android Studio", "Visual Studio Code", "IntelliJ IDEA"],
+    skills: ["Android Studio", "Visual Studio Code", "IntelliJ IDEA", "LazyVim"],
     color: "orange"
   },
   {
@@ -100,7 +100,7 @@ export const HOME_TEXTS = {
   name: "Hiro",
   title: "DESARROLLADOR",
   tech: [
-    { name: "REACT", color: "green" },
+    { name: "SQL", color: "green" },
     { name: "JAVA", color: "blue" },
     { name: "PYTHON", color: "yellow" },
   ],
@@ -139,8 +139,8 @@ export const CONTACT_TEXTS = {
       highlight: "Creemos juntos."
     },
     {
-      text: "> ¿Atravesando problemas? ",
-      highlight: "Yo los resolveré por ti."
+      text: "> ¿Necesitas ayuda o estás pasando por problemas? ",
+      highlight: "Colaboremos y resolvámoslo juntos."
     }
   ],
   collaboration: {
