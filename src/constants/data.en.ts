@@ -32,7 +32,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "BACKEND",
-    skills: ["GO", "Python", "SQL", "MQL", "Java", "TypeScript"],
+    skills: ["Python", "SQL", "MQL", "Java", "TypeScript"],
     color: "purple"
   }
 ];
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
     title: "CPhysics",
     tech: "Python",
     description: "Desktop Tool for Computational Physics",
-    status: "FILLED",
+    status: "COMPLETED",
     longDescription: `CPhysics is a desktop application developed in Python and PySide6, designed to solve computational physics problems. The tool offers an intuitive graphical interface that allows users to perform calculations and visualize data in various areas of physics, including kinematics, dynamics, thermodynamics, waves, and electromagnetism.
 The project’s modular architecture facilitates interactive simulation and analysis of results through graphs generated with popular libraries like Matplotlib and Seaborn. This makes CPhysics an excellent resource for students and enthusiasts.`,
     images: [
@@ -53,7 +53,7 @@ The project’s modular architecture facilitates interactive simulation and anal
   {
     title: "Deleitarte",
     tech: "HTML - CSS - PHP",
-    description: "Afternoon Tea Events",
+    description: "Afternoon Tea Events Page",
     status: "UNDER DEVELOPMENT",
     longDescription: `We developed a web solution that combines essential functionality with a premium aesthetic. This project arose from the challenge of taking an event planning SME to the next competitive level. With optimized navigation and a contemporary visual style, we demonstrated that well-executed simplicity is the most powerful tool for standing out in today's market.`,
     images: [
@@ -65,15 +65,15 @@ The project’s modular architecture facilitates interactive simulation and anal
     tech: "N8N - PostgreSQL - Docker",
     description: "Tool used to collect, analyze and make decisions based on legally available public information",
     status: "UNDER DEVELOPMENT",
-    longDescription: `An automated architecture that integrates the public APIs of Twitter/X and Reddit with workflows developed in n8n, incorporating sentiment analysis using open-source tools (VADER and TextBlob), structured storage in PostgreSQL, and automatic generation of operational alerts via Slack and email.
+    longDescription: `Automated architecture that integrates public Twitter/X and Reddit APIs with workflows developed in n8n, incorporating sentiment analysis using open-source tools (VADER and TextBlob), structured storage in PostgreSQL, and automatic generation of operational alerts via Slack and email.
 
-The designed solution enables the continuous collection of relevant mentions based on predefined keywords, applying natural language processing techniques to classify the sentiment and criticality of each mention. The system implements mechanisms for deduplication, data normalization, and automatic classification of potential threats, storing all information in an optimized relational model with indexes, foreign keys, and constraints that guarantee referential integrity.
+The designed solution enables continuous collection of relevant mentions based on predefined keywords, applying natural language processing techniques to classify sentiment and criticality of each mention. The system implements mechanisms for deduplication, data normalization, and automatic classification of potential threats, storing all information in an optimized relational model with indexes, foreign keys, and constraints guaranteeing referential integrity.
 
-The methodology employed includes a systematic review of the state of the art in automated OSINT, sentiment analysis, and workflow automation, identifying four recent academic papers (published after 2022) that underpin the theoretical framework. The endpoints of the APIs used, configuration parameters, rate limiting limitations, and implemented optimization strategies are thoroughly documented. The n8n workflows are described in detail, specifying each functional node from data collection to alert generation.
+The methodology employed includes a systematic review of the state of the art in automated OSINT, sentiment analysis, and workflow automation, identifying four recent academic papers (published after 2022) that underpin the theoretical framework. API endpoints used, configuration parameters, rate limiting limitations, and implemented optimization strategies are exhaustively documented. The n8n workflows are described in detail, specifying each functional node from collection to alert generation.
 
-Quantitative evaluation metrics are defined, including accuracy, recall, F1 score, average detection time, false positive rate, and keyword coverage. The implementation considers fundamental ethical aspects such as the handling of personal data, legal limits of OSINT, retention policies, and anonymization techniques, aligning with Argentine regulations on personal data protection (Law 25.326) and international standards.
+Quantitative evaluation metrics are defined, including accuracy, recall, F1-score, average detection time, false positive rate, and keyword coverage. The implementation considers fundamental ethical aspects such as personal data handling, legal limits of OSINT, retention policies, and anonymization techniques, aligning with Argentine personal data protection regulations (Law 25.326) and international standards.
 
-The expected results demonstrate the feasibility of automating the OSINT monitoring process with limited computational resources, significantly reducing the time required to detect potential threats and eliminating biases inherent in manual analysis. The proposed solution is scalable, auditable, and adaptable to different intelligence contexts, making a significant contribution to cybersecurity teams in public and private organizations with limited budgets.`,
+Expected results demonstrate the feasibility of automating the OSINT monitoring process with limited computational resources, significantly reducing time required to detect potential threats and eliminating biases inherent in manual analysis. The proposed solution is scalable, auditable, and adaptable to different intelligence contexts, making a significant contribution to cybersecurity teams in public and private organizations with limited budgets.`,
     images: [
       "/projects/osint_nsg_1.png"
     ]
@@ -120,14 +120,14 @@ export const ABOUT_TEXTS = {
   title: "ABOUT",
   description: [
     "> Technical Student in Programming.",
-    "> Fullstack programmer. Focused more on the backend.",
+    "> Programmer focused on data analysis and cybersecurity.",
     "> Contributing my bit to this world full of challenges.",
   ],
   stats: [
-    { value: "6", label: "PROJECTS", color: "cyan" },
+    { value: "3", label: "PROJECTS", color: "cyan" },
     { value: "2", label: "YEARS", color: "purple" },
-    { value: "240+", label: "INPUTS", color: "cyan" },
-    { value: "6", label: "LANGUAGES", color: "purple" },
+    { value: "320+", label: "INPUTS", color: "cyan" },
+    { value: "5", label: "LANGUAGES", color: "purple" },
   ]
 };
 
@@ -195,10 +195,71 @@ export const MORE_INFO_CATEGORIES: MoreInfoCategory[] = [
     title: "EDUCATION",
     items: [
       {
-        title: "Higher Technical Degree in Programming",
-        institution: "National Technological University",
+        title: "Electromechanical Technician",
+        institution: "Ing. Pablo Nogués",
+        date: "2012 - 2017",
+        description: "Training oriented towards installation, maintenance and repair of electrical and mechanical systems. I performed semesterly internships in various workshops, gaining experience in using tools and CNC machinery, interpreting blueprints, circuit assembly.",
+        image: "/logos/ipn.png",
+        url: "https://dti.mendoza.edu.ar/gem/ingreso/publico/escuela/1099/2",
+        button: "Web"
+      },
+      {
+        title: "Mechatronics Engineering",
+        institution: "National University of Cuyo",
+        date: "2018 - 2023",
+        description: "Training in analytical thinking and deepening understanding of basic science fundamentals applied to engineering.",
+        image: "/logos/unc.png",
+        url: "https://ingenieria.uncuyo.edu.ar/",
+        button: "Web"
+      },
+      {
+        title: "Programming Technician",
+        institution: "UTN - Mendoza Regional Faculty",
         date: "2023 - Present",
-        description: "Comprehensive training in software development, algorithms, and data structures."
+        description: "Comprehensive training in software development, algorithms, and data structures.",
+        image: "/logos/utn.png",
+        url: "https://www4.frm.utn.edu.ar/",
+        button: "Web"
+      }
+    ]
+  },
+  {
+    id: "experience",
+    title: "EXPERIENCE",
+    items: [
+      {
+        title: "Computer Equipment Repair Service",
+        institution: "Freelance",
+        date: "2018 - 2021",
+        description: "I performed repair and maintenance of computer equipment (cell phones, desktop computers, and notebooks).",
+        image: "/jobs/rp.png"
+      },
+      {
+        title: "IT Support Team Leader",
+        institution: "Argentine Army",
+        date: "2021 - 2025",
+        description: "I performed different roles such as documentation administration and IT. Part of an IT team (SCD), in charge of equipment maintenance and repair, as well as network management and maintenance.",
+        image: "/jobs/ea.png",
+        url: "https://www.linkedin.com/company/ejercitoargentino/",
+        button: "Linkedin"
+      },
+      {
+        title: "Auditor",
+        institution: "Millan S. A.",
+        date: "2025",
+        description: "I performed internal audits to ensure correct distribution of orders. Preparation of balance sheets in various branches. Physical and documentary inventory control, identifying discrepancies and proposing corrective actions.",
+        image: "/jobs/millan.png",
+        url: "https://www.linkedin.com/company/millan-s.-a./",
+        button: "Linkedin"
+      },
+      {
+        title: "Laboratory Technician",
+        institution: "Telebit S. A.",
+        date: "2025 - 2026",
+        description: "I perform quality control, equipment calibration and specialized technical support. Expert in ensuring process precision through compliance with international regulations and optimization of test protocols.",
+        image: "/jobs/telebit.png",
+        url: "https://www.linkedin.com/company/telebit-s.a./",
+        button: "Linkedin"
       }
     ]
   },
@@ -207,10 +268,31 @@ export const MORE_INFO_CATEGORIES: MoreInfoCategory[] = [
     title: "CERTIFICATIONS",
     items: [
       {
-        title: "Full Stack Developer",
-        institution: "Udemy",
-        date: "2024",
-        description: "Complete course on modern web development."
+        title: "Cybersecurity Fundamentals",
+        institution: "IBM",
+        date: "2026",
+        description: "Course on cybersecurity fundamentals",
+        image: "/certificates/ibm_cybersecurity_fundamentals.png",
+        url: "https://www.credly.com/badges/7c232a79-92ef-4eee-a310-a1aee3f9b5de/public_url",
+        button: "View Credential"
+      },
+      {
+        title: "Data Fundamentals",
+        institution: "IBM",
+        date: "2026",
+        description: "Course on data analysis fundamentals",
+        image: "/certificates/ibm_data_fundamentals.png",
+        url: "https://www.credly.com/badges/1c49c0c0-6874-4cee-8069-6b9ec26240c5/public_url",
+        button: "View Credential"
+      },
+      {
+        title: "Artificial Intelligence Fundamentals",
+        institution: "IBM",
+        date: "2026",
+        description: "Course on AI fundamentals",
+        image: "/certificates/ia_ibm.png",
+        url: "https://www.credly.com/badges/d346340a-61f0-4319-89a6-137424938701/public_url",
+        button: "View Credential"
       }
     ]
   }
