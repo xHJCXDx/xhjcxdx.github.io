@@ -65,6 +65,7 @@ export const PROJECTS: Project[] = [
     title: "CPhysics",
     tech: "Python",
     description: "Desktop Tool for Computational Physics",
+    date: "2024",
     status: "FILLED",
     longDescription: `CPhysics is a desktop application developed in Python and PySide6, designed to solve computational physics problems. The tool offers an intuitive graphical interface that allows users to perform calculations and visualize data in various areas of physics, including kinematics, dynamics, thermodynamics, waves, and electromagnetism.
 The project’s modular architecture facilitates interactive simulation and analysis of results through graphs generated with popular libraries like Matplotlib and Seaborn. This makes CPhysics an excellent resource for students and enthusiasts.`,
@@ -77,6 +78,7 @@ The project’s modular architecture facilitates interactive simulation and anal
     title: "Deleitarte",
     tech: "HTML - CSS - PHP",
     description: "Afternoon Tea Events Page",
+    date: "2025",
     status: "UNDER DEVELOPMENT",
     longDescription: `We developed a web solution that combines essential functionality with a premium aesthetic. This project arose from the challenge of taking an event planning SME to the next competitive level. With optimized navigation and a contemporary visual style, we demonstrated that well-executed simplicity is the most powerful tool for standing out in today's market.`,
     images: [
@@ -87,6 +89,7 @@ The project’s modular architecture facilitates interactive simulation and anal
     title: "OSINT NSG",
     tech: "N8N - PostgreSQL - Docker",
     description: "Tool used to collect, analyze and make decisions based on legally available public information",
+    date: "2025",
     status: "UNDER DEVELOPMENT",
     longDescription: `Automated architecture that integrates public Twitter/X and Reddit APIs with workflows developed in n8n, incorporating sentiment analysis using open-source tools (VADER and TextBlob), structured storage in PostgreSQL, and automatic generation of operational alerts via Slack and email.
 
