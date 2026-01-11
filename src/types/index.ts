@@ -10,10 +10,16 @@ export interface NavItem {
   icon: LucideIcon;
 }
 
+// Skill
+export interface Skill {
+  name: string;
+  level: 'High' | 'Medium' | 'Low';
+}
+
 // Skill category
 export interface SkillCategory {
   title: string;
-  skills: string[];
+  skills: Skill[];
   color: TailwindColor;
 }
 

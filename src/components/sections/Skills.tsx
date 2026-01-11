@@ -22,8 +22,8 @@ export const Skills: React.FC = () => {
                         </h3>
                         <div className="space-y-3">
                             {skills.map((skill) => (
-                            <div key={skill} className={`p-3 border text-center ${classes.skill}`}>
-                                <span className="font-mono text-gray-700 dark:text-gray-300">{skill}</span>
+                            <div key={skill.name} className={`p-3 border text-center ${classes.skill[skill.level]}`}>
+                                <span className="font-mono">{skill.name}</span>
                             </div>
                             ))}
                         </div>

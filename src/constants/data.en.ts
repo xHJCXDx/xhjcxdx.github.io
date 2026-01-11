@@ -12,27 +12,50 @@ export const NAV_ITEMS: NavItem[] = [
 export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "PLATFORM",
-    skills: ["Docker", "MongoDB", "N8N"],
+    skills: [
+      { name: "Docker", level: "Medium" },
+      { name: "MongoDB", level: "Medium" },
+      { name: "N8N", level: "Medium" }
+    ],
     color: "red"
   },
   {
     title: "FRAMEWORKS & LIBRARIES",
-    skills: ["React", "React Native", "Tailwind "],
+    skills: [
+      { name: "React", level: "Medium" },
+      { name: "React Native", level: "Low" },
+      { name: "Tailwind", level: "Low" }
+    ],
     color: "pink"
   },
   {
     title: "IDE",
-    skills: ["Android Studio", "Visual Studio Code", "IntelliJ IDEA", "LazyVim"],
+    skills: [
+      { name: "Android Studio", level: "Low" },
+      { name: "Visual Studio Code", level: "High" },
+      { name: "IntelliJ IDEA", level: "Medium" },
+      { name: "LazyVim", level: "High" }
+    ],
     color: "orange"
   },
   {
     title: "FRONTEND",
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: [
+      { name: "HTML", level: "High" },
+      { name: "CSS", level: "High" },
+      { name: "JavaScript", level: "High" }
+    ],
     color: "blue"
   },
   {
     title: "BACKEND",
-    skills: ["Python", "SQL", "MQL", "Java", "TypeScript"],
+    skills: [
+      { name: "Python", level: "High" },
+      { name: "SQL", level: "High" },
+      { name: "MQL", level: "Medium" },
+      { name: "Java", level: "High" },
+      { name: "TypeScript", level: "Medium" }
+    ],
     color: "green"
   }
 ];
