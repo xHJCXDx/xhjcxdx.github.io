@@ -11,7 +11,7 @@ export const LanguageSelector: React.FC = () => {
         className={`px-3 py-1 text-sm font-mono border ${
           language === 'en'
             ? 'text-green-400 border-green-400 bg-green-400/10'
-            : 'text-gray-400 border-transparent hover:text-blue-400'
+            : 'text-gray-600 dark:text-gray-400 border-transparent hover:text-blue-400'
         }`}
       >
         EN
@@ -21,7 +21,7 @@ export const LanguageSelector: React.FC = () => {
         className={`px-3 py-1 text-sm font-mono border ${
           language === 'es'
             ? 'text-green-400 border-green-400 bg-green-400/10'
-            : 'text-gray-400 border-transparent hover:text-blue-400'
+            : 'text-gray-600 dark:text-gray-400 border-transparent hover:text-blue-400'
         }`}
       >
         ES

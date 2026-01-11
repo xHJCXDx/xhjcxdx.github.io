@@ -5,8 +5,8 @@ export const BeyondCode: React.FC = () => {
     const { texts } = useLanguage();
 
     return (
-        <div className="mt-20 pt-10 border-t border-green-500/20">
-            <h2 className="text-3xl font-mono font-bold text-white mb-16 text-center">
+        <div className="mt-20 pt-10 border-t border-green-600/20 dark:border-green-500/20">
+            <h2 className="text-3xl font-mono font-bold text-gray-900 dark:text-white mb-16 text-center">
                 {texts.BEYOND_CODE_TEXTS.title}
             </h2>
 
@@ -27,20 +27,20 @@ export const BeyondCode: React.FC = () => {
                                 
                                 {/* Content Box */}
                                 <div className="ml-16 md:ml-0 md:w-[45%]">
-                                    <div className={`p-6 bg-black/40 border border-green-500/30 rounded-lg hover:border-blue-400/50 transition-all duration-300 group`}>
+                                    <div className={`p-6 bg-white/60 dark:bg-black/40 border border-green-600/30 dark:border-green-500/30 rounded-lg hover:border-blue-400/50 transition-all duration-300 group`}>
                                         <div className="flex items-center mb-3">
-                                            {Icon && <Icon className="w-6 h-6 text-blue-400 mr-3 group-hover:scale-110 transition-transform" />}
-                                            <h3 className="text-xl font-bold text-white font-mono">{item.title}</h3>
+                                            {Icon && <Icon className="w-6 h-6 text-blue-600 dark:text-blue-400 mr-3 group-hover:scale-110 transition-transform" />}
+                                            <h3 className="text-xl font-bold text-gray-900 dark:text-white font-mono">{item.title}</h3>
                                         </div>
-                                        <span className="inline-block px-3 py-1 bg-green-500/20 text-green-300 text-xs rounded-full font-mono mb-3 border border-green-500/30">
+                                        <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-300 text-xs rounded-full font-mono mb-3 border border-green-600/30 dark:border-green-500/30">
                                             {item.year}
                                         </span>
-                                        <p className="text-gray-400 text-sm font-mono leading-relaxed mb-4">
+                                        <p className="text-gray-700 dark:text-gray-400 text-sm font-mono leading-relaxed mb-4">
                                             {item.description}
                                         </p>
                                         
                                         {item.image && (
-                                            <div className="overflow-hidden rounded-lg border border-green-500/20 bg-black/40">
+                                            <div className="overflow-hidden rounded-lg border border-green-600/20 dark:border-green-500/20 bg-white dark:bg-black/40">
                                                 <img 
                                                     src={item.image} 
                                                     alt={item.title} 

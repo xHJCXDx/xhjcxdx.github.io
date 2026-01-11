@@ -16,7 +16,7 @@ export const Skills: React.FC = () => {
             {texts.SKILL_CATEGORIES.map(({ title, skills, color }) => {
                 const classes = colorClasses[color] || colorClasses.blue;
                 return (
-                    <div key={title} className={`border-2 p-6 bg-gradient-to-b to-black/50 ${classes.container}`}>
+                    <div key={title} className={`border-2 p-6 bg-white/50 dark:bg-transparent dark:bg-gradient-to-b dark:to-black/50 ${classes.container}`}>
                         <h3 className={`text-2xl font-mono font-bold mb-6 text-center ${classes.title}`}>
                             {title}
                         </h3>

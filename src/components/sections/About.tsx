@@ -30,17 +30,17 @@ export const About: React.FC = () => {
             case 'blue':
                 return {
                     border: 'border-blue-400/30',
-                    text: 'text-blue-400',
+                    text: 'text-blue-600 dark:text-blue-400',
                 };
             case 'green':
                 return {
                     border: 'border-green-400/30',
-                    text: 'text-green-400',
+                    text: 'text-green-600 dark:text-green-400',
                 };
             default:
                 return {
                     border: 'border-gray-400/30',
-                    text: 'text-gray-400',
+                    text: 'text-gray-600 dark:text-gray-400',
                 };
         }
     };
@@ -50,10 +50,10 @@ export const About: React.FC = () => {
         <div className="max-w-6xl mx-auto w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
-                <h2 className="text-4xl font-mono font-bold text-white mb-8 border-b border-blue-400 pb-4">
+                <h2 className="text-4xl font-mono font-bold text-gray-900 dark:text-white mb-8 border-b border-blue-400 pb-4">
                 {texts.ABOUT_TEXTS.title}
                 </h2>
-                <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
+                <div className="space-y-6 text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
                 {texts.ABOUT_TEXTS.description.map((text, index) => (
                     <p key={index}>{text}</p>
                 ))}
@@ -61,14 +61,14 @@ export const About: React.FC = () => {
             </div>
             
             <div className="relative">
-                <div className="border-2 border-green-500/50 p-8 bg-gradient-to-br from-green-900/20 to-blue-900/20">
+                <div className="border-2 border-green-600/50 dark:border-green-500/50 p-8 bg-white dark:bg-transparent dark:bg-gradient-to-br dark:from-green-900/20 dark:to-blue-900/20">
                 <div className="grid grid-cols-2 gap-4 text-center">
                     {texts.ABOUT_TEXTS.stats.map((stat) => {
                         const colors = getStatColorClass(stat.color);
                         return (
                             <div key={stat.label} className={`border ${colors.border} p-4`}>
                                 <div className={`text-2xl font-mono font-bold ${colors.text}`}>{stat.value}</div>
-                                <div className="text-sm text-gray-400 font-mono">{stat.label}</div>
+                                <div className="text-sm text-gray-600 dark:text-gray-400 font-mono">{stat.label}</div>
                             </div>
                         );
                     })}

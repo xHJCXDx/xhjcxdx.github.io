@@ -22,13 +22,13 @@ export const Home: React.FC = () => {
     const getTechColorClass = (color: string) => {
         switch (color) {
             case 'green':
-                return 'border-green-500 bg-green-500/10 text-green-400';
+                return 'border-green-500 bg-green-100 dark:bg-green-500/10 text-green-700 dark:text-green-400';
             case 'blue':
-                return 'border-blue-500 bg-blue-500/10 text-blue-400';
+                return 'border-blue-500 bg-blue-100 dark:bg-blue-500/10 text-blue-700 dark:text-blue-400';
             case 'yellow':
-                return 'border-yellow-500 bg-yellow-500/10 text-yellow-400';
+                return 'border-yellow-500 bg-yellow-100 dark:bg-yellow-500/10 text-yellow-700 dark:text-yellow-400';
             default:
-                return 'border-gray-500 bg-gray-500/10 text-gray-400';
+                return 'border-gray-500 bg-gray-100 dark:bg-gray-500/10 text-gray-700 dark:text-gray-400';
         }
     };
 
@@ -47,11 +47,11 @@ export const Home: React.FC = () => {
                 </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-white mb-4 text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-gray-900 dark:text-white mb-4 text-center">
             {texts.HOME_TEXTS.name}{/*<span className="text-blue-400">DEV</span> */}
             </h1>
             
-            <div className="text-lg sm:text-xl lg:text-2xl font-mono text-green-400 mb-8 h-6 sm:h-8 text-center">
+            <div className="text-lg sm:text-xl lg:text-2xl font-mono text-green-600 dark:text-green-400 mb-8 h-6 sm:h-8 text-center">
             {displayText}<span className="animate-blink">|</span>
             </div>
             
@@ -63,8 +63,8 @@ export const Home: React.FC = () => {
             ))}
             </div>
 
-            <ChevronDown className="text-gray-400 animate-bounce mx-auto" size={32} />
-            <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
+            <ChevronDown className="text-gray-500 dark:text-gray-400 animate-bounce mx-auto" size={32} />
+            <div className="space-y-6 text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
                 <p>
                     {texts.HOME_TEXTS.quote}
                 </p>

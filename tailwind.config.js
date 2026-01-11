@@ -4,8 +4,12 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      colors: {
+        'light-bg': '#eae8e1',
+      },
       animation: {
         blink: 'blink 1s infinite',
         'fade-in-up': 'fadeInUp 0.5s ease-out forwards',

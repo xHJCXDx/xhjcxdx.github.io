@@ -21,11 +21,10 @@ const App: React.FC = () => {
     }
   };
 
-  return (
-    <div className="min-h-screen bg-black text-white overflow-x-hidden">
-      <div className="fixed inset-0 opacity-10 pointer-events-none">
-        <div 
-          className="absolute inset-0" 
+    return (
+      <div className="min-h-screen bg-light-bg dark:bg-black text-gray-900 dark:text-white overflow-x-hidden transition-colors duration-300">
+        <div className="fixed inset-0 opacity-10 pointer-events-none">
+          <div            className="absolute inset-0" 
           style={{
             backgroundImage: `
               linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px),

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
 import { LanguageSelector } from './LanguageSelector';
+import { ThemeToggle } from './ThemeToggle';
 
 interface NavbarProps {
     activeSection: string;
@@ -17,7 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-green-500/30">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-green-500/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -37,7 +38,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                     className={`flex items-center space-x-2 px-3 py-2 font-mono text-sm transition-all duration-300 border ${
                     activeSection === id 
                         ? 'text-green-400 border-green-400 bg-green-400/10' 
-                        : 'text-gray-400 border-transparent hover:text-blue-400 hover:border-blue-400/50'
+                        : 'text-gray-600 dark:text-gray-400 border-transparent hover:text-blue-400 hover:border-blue-400/50'
                     }`}
                 >
                     <Icon size={16} />
@@ -45,6 +46,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 </button>
                 ))}
                 <LanguageSelector />
+                <ThemeToggle />
             </div>
 
             {/* Mobile menu button */}
@@ -76,15 +78,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                     className={`w-full flex items-center space-x-3 px-4 py-3 font-mono text-sm transition-all duration-300 border-l-2 ${
                     activeSection === id 
                         ? 'text-green-400 border-l-green-400 bg-green-400/10' 
-                        : 'text-gray-400 border-l-transparent hover:text-blue-400 hover:border-l-blue-400 hover:bg-blue-400/5'
+                        : 'text-gray-600 dark:text-gray-400 border-l-transparent hover:text-blue-400 hover:border-l-blue-400 hover:bg-blue-400/5'
                     }`}
                 >
                     <Icon size={18} />
                     <span>{label}</span>
                 </button>
                 ))}
-                <div className="pt-4">
+                <div className="pt-4 flex items-center gap-4">
                     <LanguageSelector />
+                    <ThemeToggle />
                 </div>
             </div>
             </div>
