@@ -27,15 +27,15 @@ export const About: React.FC = () => {
 
     const getStatColorClass = (color: string) => {
         switch (color) {
-            case 'cyan':
+            case 'blue':
                 return {
-                    border: 'border-cyan-400/30',
-                    text: 'text-cyan-400',
+                    border: 'border-blue-400/30',
+                    text: 'text-blue-400',
                 };
-            case 'purple':
+            case 'green':
                 return {
-                    border: 'border-purple-400/30',
-                    text: 'text-purple-400',
+                    border: 'border-green-400/30',
+                    text: 'text-green-400',
                 };
             default:
                 return {
@@ -50,7 +50,7 @@ export const About: React.FC = () => {
         <div className="max-w-6xl mx-auto w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
-                <h2 className="text-4xl font-mono font-bold text-white mb-8 border-b border-cyan-400 pb-4">
+                <h2 className="text-4xl font-mono font-bold text-white mb-8 border-b border-blue-400 pb-4">
                 {texts.ABOUT_TEXTS.title}
                 </h2>
                 <div className="space-y-6 text-gray-300 font-mono leading-relaxed">
@@ -61,7 +61,7 @@ export const About: React.FC = () => {
             </div>
             
             <div className="relative">
-                <div className="border-2 border-purple-500/50 p-8 bg-gradient-to-br from-purple-900/20 to-cyan-900/20">
+                <div className="border-2 border-green-500/50 p-8 bg-gradient-to-br from-green-900/20 to-blue-900/20">
                 <div className="grid grid-cols-2 gap-4 text-center">
                     {texts.ABOUT_TEXTS.stats.map((stat) => {
                         const colors = getStatColorClass(stat.color);
@@ -81,7 +81,7 @@ export const About: React.FC = () => {
                 <div className="flex justify-center mt-8">
                     <button 
                         onClick={handleShowMore}
-                        className="group flex flex-col items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                        className="group flex flex-col items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                     >
                         <span className="font-mono text-sm tracking-widest">{texts.MORE_INFO_TEXTS.buttonText}</span>
                         <ChevronDown className="animate-bounce group-hover:translate-y-1 transition-transform" />
@@ -97,7 +97,7 @@ export const About: React.FC = () => {
                         <div className="flex justify-center mt-12 pb-10">
                             <button 
                                 onClick={handleShowBeyondCode}
-                                className="group flex flex-col items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                                className="group flex flex-col items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
                             >
                                 <span className="font-mono text-sm tracking-widest">{texts.BEYOND_CODE_TEXTS.buttonText}</span>
                                 <ChevronDown className="animate-bounce group-hover:translate-y-1 transition-transform" />

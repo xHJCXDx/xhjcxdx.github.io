@@ -28,12 +28,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "FRONTEND",
     skills: ["HTML", "CSS", "JavaScript"],
-    color: "cyan"
+    color: "blue"
   },
   {
     title: "BACKEND",
     skills: ["Python", "SQL", "MQL", "Java", "TypeScript"],
-    color: "purple"
+    color: "green"
   }
 ];
 
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
     title: "CPhysics",
     tech: "Python",
     description: "Desktop Tool for Computational Physics",
-    status: "COMPLETED",
+    status: "FILLED",
     longDescription: `CPhysics is a desktop application developed in Python and PySide6, designed to solve computational physics problems. The tool offers an intuitive graphical interface that allows users to perform calculations and visualize data in various areas of physics, including kinematics, dynamics, thermodynamics, waves, and electromagnetism.
 The project’s modular architecture facilitates interactive simulation and analysis of results through graphs generated with popular libraries like Matplotlib and Seaborn. This makes CPhysics an excellent resource for students and enthusiasts.`,
     images: [
@@ -94,14 +94,14 @@ export const CONTACT_METHODS: ContactMethod[] = [
     icon: Github,
     title: "GITHUB",
     subtitle: "xHJCXDx",
-    color: "cyan"
+    color: "purple"
   },
   {
     href: "https://app.daily.dev/xhjcxdx",
     icon: Code,
     title: "Daily.dev",
     subtitle: "@xhjcxdx",
-    color: "purple"
+    color: "green"
   }
 ];
 
@@ -109,8 +109,8 @@ export const HOME_TEXTS = {
   name: "Hiro",
   title: "DEVELOPER",
   tech: [
-    { name: "REACT", color: "purple" },
-    { name: "JAVA", color: "cyan" },
+    { name: "REACT", color: "green" },
+    { name: "JAVA", color: "blue" },
     { name: "PYTHON", color: "yellow" },
   ],
   quote: "> The beauty of simplicity",
@@ -124,10 +124,10 @@ export const ABOUT_TEXTS = {
     "> Contributing my bit to this world full of challenges.",
   ],
   stats: [
-    { value: "3", label: "PROJECTS", color: "cyan" },
-    { value: "2", label: "YEARS", color: "purple" },
-    { value: "320+", label: "INPUTS", color: "cyan" },
-    { value: "5", label: "LANGUAGES", color: "purple" },
+    { value: "3", label: "PROJECTS", color: "blue" },
+    { value: "2", label: "YEARS", color: "green" },
+    { value: "320+", label: "INPUTS", color: "blue" },
+    { value: "5", label: "LANGUAGES", color: "green" },
   ]
 };
 

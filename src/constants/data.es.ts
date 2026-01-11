@@ -28,12 +28,12 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   {
     title: "FRONTEND",
     skills: ["HTML", "CSS", "JavaScript"],
-    color: "cyan"
+    color: "blue"
   },
   {
     title: "BACKEND",
     skills: ["Python", "SQL", "MQL", "Java", "TypeScript"],
-    color: "purple"
+    color: "green"
   }
 ];
 
@@ -85,14 +85,14 @@ export const CONTACT_METHODS: ContactMethod[] = [
     icon: Github,
     title: "GITHUB",
     subtitle: "xHJCXDx",
-    color: "cyan"
+    color: "purple"
   },
   {
     href: "https://app.daily.dev/xhjcxdx",
     icon: Code,
     title: "Daily.dev",
     subtitle: "@xhjcxdx",
-    color: "purple"
+    color: "green"
   }
 ];
 
@@ -100,8 +100,8 @@ export const HOME_TEXTS = {
   name: "Hiro",
   title: "DESARROLLADOR",
   tech: [
-    { name: "REACT", color: "purple" },
-    { name: "JAVA", color: "cyan" },
+    { name: "REACT", color: "green" },
+    { name: "JAVA", color: "blue" },
     { name: "PYTHON", color: "yellow" },
   ],
   quote: "> La belleza de la simplicidad",
@@ -115,10 +115,10 @@ export const ABOUT_TEXTS = {
     "> Aportando mi granito de arena a este mundo lleno de retos.",
   ],
   stats: [
-    { value: "3", label: "PROYECTOS", color: "cyan" },
-    { value: "2", label: "AÑOS", color: "purple" },
-    { value: "320+", label: "APORTES", color: "cyan" },
-    { value: "5", label: "LENGUAJES", color: "purple" },
+    { value: "3", label: "PROYECTOS", color: "blue" },
+    { value: "2", label: "AÑOS", color: "green" },
+    { value: "320+", label: "APORTES", color: "blue" },
+    { value: "5", label: "LENGUAJES", color: "green" },
   ]
 };
 

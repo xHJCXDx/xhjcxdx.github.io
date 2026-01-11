@@ -10,8 +10,8 @@ export const LanguageSelector: React.FC = () => {
         onClick={() => setLanguage('en')}
         className={`px-3 py-1 text-sm font-mono border ${
           language === 'en'
-            ? 'text-purple-400 border-purple-400 bg-purple-400/10'
-            : 'text-gray-400 border-transparent hover:text-cyan-400'
+            ? 'text-green-400 border-green-400 bg-green-400/10'
+            : 'text-gray-400 border-transparent hover:text-blue-400'
         }`}
       >
         EN
@@ -20,8 +20,8 @@ export const LanguageSelector: React.FC = () => {
         onClick={() => setLanguage('es')}
         className={`px-3 py-1 text-sm font-mono border ${
           language === 'es'
-            ? 'text-purple-400 border-purple-400 bg-purple-400/10'
-            : 'text-gray-400 border-transparent hover:text-cyan-400'
+            ? 'text-green-400 border-green-400 bg-green-400/10'
+            : 'text-gray-400 border-transparent hover:text-blue-400'
         }`}
       >
         ES

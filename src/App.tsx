@@ -28,8 +28,8 @@ const App: React.FC = () => {
           className="absolute inset-0" 
           style={{
             backgroundImage: `
-              linear-gradient(rgba(147, 51, 234, 0.3) 1px, transparent 1px),
-              linear-gradient(90deg, rgba(147, 51, 234, 0.3) 1px, transparent 1px)
+              linear-gradient(rgba(34, 197, 94, 0.3) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(34, 197, 94, 0.3) 1px, transparent 1px)
             `,
             backgroundSize: '50px 50px'
           }}
