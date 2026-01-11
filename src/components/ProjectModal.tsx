@@ -14,13 +14,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   return (
     <div className="fixed inset-0 bg-black/75 flex justify-center z-50 p-4 overflow-y-auto py-20" onClick={onClose}>
-      <div className="bg-white dark:bg-gradient-to-br dark:from-green-900/80 dark:to-blue-900/30 border border-green-600/50 dark:border-green-500/50 p-8 rounded-lg max-w-3xl w-full relative text-gray-900 dark:text-white font-mono h-min shadow-xl" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white dark:bg-black dark:from-green-900/80 dark:to-blue-900/30 border border-green-600/50 dark:border-green-500/50 p-8 rounded-lg max-w-3xl w-full relative text-gray-900 dark:text-white font-mono h-min shadow-xl" onClick={(e) => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
           <X size={24} />
         </button>
-        
+
         <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-4">{project.title}</h2>
-        
+
         <div className="mb-6">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed" style={{ whiteSpace: 'pre-line' }}>
             {project.longDescription || project.description}
@@ -39,8 +39,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         )}
 
         <div className="mb-6">
-            <h3 className="text-xl text-green-600 dark:text-green-400 mb-2">{texts.PROJECT_MODAL_TEXTS.technologies}</h3>
-            <p className="text-blue-600 dark:text-blue-400">{project.tech}</p>
+          <h3 className="text-xl text-green-600 dark:text-green-400 mb-2">{texts.PROJECT_MODAL_TEXTS.technologies}</h3>
+          <p className="text-blue-600 dark:text-blue-400">{project.tech}</p>
         </div>
 
         {(project.liveDemoUrl || project.githubUrl) && (
