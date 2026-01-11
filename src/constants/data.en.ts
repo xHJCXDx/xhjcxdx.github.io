@@ -1,5 +1,5 @@
-import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play } from 'lucide-react';
-import type { NavItem, SkillCategory, Project, ContactMethod } from '@/types';
+import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Music, Camera, Gamepad2, Coffee } from 'lucide-react';
+import type { NavItem, SkillCategory, Project, ContactMethod, MoreInfoCategory, TimelineItem } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'START', icon: Play },
@@ -183,3 +183,69 @@ export const NAVBAR_TEXTS = {
 export const FOOTER_TEXTS = {
   copyright: "© 2025 xHJCXDx Developer. All rights reserved."
 };
+
+export const MORE_INFO_TEXTS = {
+  title: "MORE INFO",
+  buttonText: "VIEW MORE DETAILS"
+};
+
+export const MORE_INFO_CATEGORIES: MoreInfoCategory[] = [
+  {
+    id: "education",
+    title: "EDUCATION",
+    items: [
+      {
+        title: "Higher Technical Degree in Programming",
+        institution: "National Technological University",
+        date: "2023 - Present",
+        description: "Comprehensive training in software development, algorithms, and data structures."
+      }
+    ]
+  },
+  {
+    id: "certifications",
+    title: "CERTIFICATIONS",
+    items: [
+      {
+        title: "Full Stack Developer",
+        institution: "Udemy",
+        date: "2024",
+        description: "Complete course on modern web development."
+      }
+    ]
+  }
+];
+
+export const BEYOND_CODE_TEXTS = {
+  title: "BEYOND THE CODE",
+  buttonText: "DISCOVER MY PERSONAL SIDE"
+};
+
+export const BEYOND_CODE_ITEMS: TimelineItem[] = [
+  {
+    year: "2018 - Present",
+    title: "Photography",
+    description: "Capturing unique moments and exploring visual composition in my free time.",
+    icon: Camera,
+    image: "/hobbies/photography.jpg"
+  },
+  {
+    year: "2010 - Present",
+    title: "Video Games",
+    description: "Passionate about immersive narratives and game mechanics design.",
+    icon: Gamepad2,
+    image: "/hobbies/gaming.jpg"
+  },
+  {
+    year: "Daily Habit",
+    title: "Coffee & Reading",
+    description: "Enjoying a good book accompanied by specialty coffee.",
+    icon: Coffee
+  },
+  {
+    year: "Always",
+    title: "Music",
+    description: "Exploring new genres and finding inspiration in sound.",
+    icon: Music
+  }
+];

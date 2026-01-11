@@ -37,3 +37,30 @@ export interface ContactMethod {
   subtitle: string;
   color: TailwindColor;
 }
+
+// More Info Item
+export interface MoreInfoItem {
+  title: string;
+  institution: string;
+  date: string;
+  description?: string;
+  image?: string;
+  url?: string;
+  button?: string;
+}
+
+// More Info Category
+export interface MoreInfoCategory {
+  id: string;
+  title: string;
+  items: MoreInfoItem[];
+}
+
+// Timeline Item
+export interface TimelineItem {
+  year: string;
+  title: string;
+  description: string;
+  icon?: LucideIcon;
+  image?: string;
+}

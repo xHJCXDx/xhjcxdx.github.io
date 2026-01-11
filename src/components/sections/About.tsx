@@ -1,8 +1,29 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { ChevronDown } from 'lucide-react';
+import { MoreInfo } from './MoreInfo';
+import { BeyondCode } from './BeyondCode';
 
 export const About: React.FC = () => {
     const { texts } = useLanguage();
+    const [showMoreInfo, setShowMoreInfo] = useState(false);
+    const [showBeyondCode, setShowBeyondCode] = useState(false);
+    const moreInfoRef = useRef<HTMLDivElement>(null);
+    const beyondCodeRef = useRef<HTMLDivElement>(null);
+
+    const handleShowMore = () => {
+        setShowMoreInfo(true);
+        setTimeout(() => {
+            moreInfoRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    };
+
+    const handleShowBeyondCode = () => {
+        setShowBeyondCode(true);
+        setTimeout(() => {
+            beyondCodeRef.current?.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+    };
 
     const getStatColorClass = (color: string) => {
         switch (color) {
@@ -25,9 +46,9 @@ export const About: React.FC = () => {
     };
 
     return (
-        <section className="min-h-screen py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <section className="min-h-screen py-20 px-6 flex flex-col justify-center">
+        <div className="max-w-6xl mx-auto w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
                 <h2 className="text-4xl font-mono font-bold text-white mb-8 border-b border-cyan-400 pb-4">
                 {texts.ABOUT_TEXTS.title}
@@ -55,6 +76,42 @@ export const About: React.FC = () => {
                 </div>
             </div>
             </div>
+
+            {!showMoreInfo && (
+                <div className="flex justify-center mt-8">
+                    <button 
+                        onClick={handleShowMore}
+                        className="group flex flex-col items-center gap-2 text-cyan-400 hover:text-cyan-300 transition-colors"
+                    >
+                        <span className="font-mono text-sm tracking-widest">{texts.MORE_INFO_TEXTS.buttonText}</span>
+                        <ChevronDown className="animate-bounce group-hover:translate-y-1 transition-transform" />
+                    </button>
+                </div>
+            )}
+
+            {showMoreInfo && (
+                <div ref={moreInfoRef} className="animate-fade-in-up">
+                    <MoreInfo />
+                    
+                    {!showBeyondCode && (
+                        <div className="flex justify-center mt-12 pb-10">
+                            <button 
+                                onClick={handleShowBeyondCode}
+                                className="group flex flex-col items-center gap-2 text-purple-400 hover:text-purple-300 transition-colors"
+                            >
+                                <span className="font-mono text-sm tracking-widest">{texts.BEYOND_CODE_TEXTS.buttonText}</span>
+                                <ChevronDown className="animate-bounce group-hover:translate-y-1 transition-transform" />
+                            </button>
+                        </div>
+                    )}
+
+                    {showBeyondCode && (
+                        <div ref={beyondCodeRef} className="animate-fade-in-up">
+                            <BeyondCode />
+                        </div>
+                    )}
+                </div>
+            )}
         </div>
         </section>
     );

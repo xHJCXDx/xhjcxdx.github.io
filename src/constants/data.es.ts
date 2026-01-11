@@ -1,5 +1,5 @@
-import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play } from 'lucide-react';
-import type { NavItem, SkillCategory, Project, ContactMethod } from '@/types';
+import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Music, Camera, Gamepad2, Coffee } from 'lucide-react';
+import type { NavItem, SkillCategory, Project, ContactMethod, MoreInfoCategory, TimelineItem } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'INICIO', icon: Play },
@@ -32,7 +32,7 @@ export const SKILL_CATEGORIES: SkillCategory[] = [
   },
   {
     title: "BACKEND",
-    skills: ["GO", "Python", "SQL", "MQL", "Java", "TypeScript"],
+    skills: ["Python", "SQL", "MQL", "Java", "TypeScript"],
     color: "purple"
   }
 ];
@@ -64,15 +64,7 @@ export const PROJECTS: Project[] = [
     tech: "N8N - PostgreSQL - Docker",
     description: "Herramienta utilizada para recolectar, analizar y tomar decisiones basadas en información pública disponible legalmente",
     status: "EN DESARROLLO",
-    longDescription: `Arquitectura automatizada que integra las APIs públicas de Twitter/X y Reddit con flujos de trabajo desarrollados en n8n, incorporando análisis de sentimiento mediante herramientas open-source (VADER y TextBlob), almacenamiento estructurado en PostgreSQL y generación automática de alertas operativas vía Slack y correo electrónico.
-
-La solución diseñada permite la recopilación continua de menciones relevantes basadas en keywords predefinidos, aplicando técnicas de procesamiento de lenguaje natural para clasificar el sentimiento y la criticidad de cada mención. El sistema implementa mecanismos de deduplicación, normalización de datos y clasificación automática de amenazas potenciales, almacenando toda la información en un modelo relacional optimizado con índices, claves foráneas y constraints que garantizan la integridad referencial.
-
-La metodología empleada incluye la revisión sistemática del estado del arte en OSINT automatizado, análisis de sentimiento y automatización de workflows, identificando cuatro papers académicos recientes (posteriores a 2022) que fundamentan el marco teórico. Se documentan exhaustivamente los endpoints de las APIs utilizadas, los parámetros de configuración, las limitaciones de rate limiting y las estrategias de optimización implementadas. Los workflows de n8n se describen en detalle, especificando cada nodo funcional desde la recopilación hasta la generación de alertas.
-
-Se definen métricas cuantitativas de evaluación incluyendo precisión, recall, F1-score, tiempo promedio de detección, tasa de falsos positivos y cobertura de keywords. La implementación considera aspectos éticos fundamentales como el tratamiento de datos personales, límites legales de OSINT, políticas de retención y técnicas de anonimización, alineándose con la normativa argentina de protección de datos personales (Ley 25.326) y estándares internacionales.
-
-Los resultados esperados demuestran la viabilidad de automatizar el proceso de monitoreo OSINT con recursos computacionales limitados, reduciendo significativamente el tiempo de detección de amenazas potenciales y eliminando sesgos inherentes al análisis manual. La solución propuesta es escalable, auditable y adaptable a diferentes contextos de inteligencia, constituyendo un aporte significativo para equipos de ciberseguridad en organizaciones públicas y privadas con presupuestos acotados.`,
+    longDescription: `Arquitectura automatizada que integra las APIs públicas de Twitter/X y Reddit con flujos de trabajo desarrollados en n8n, incorporando análisis de sentimiento mediante herramientas open-source (VADER y TextBlob), almacenamiento estructurado en PostgreSQL y generación automática de alertas operativas vía Slack y correo electrónico.\n\nLa solución diseñada permite la recopilación continua de menciones relevantes basadas en keywords predefinidos, aplicando técnicas de procesamiento de lenguaje natural para clasificar el sentimiento y la criticidad de cada mención. El sistema implementa mecanismos de deduplicación, normalización de datos y clasificación automática de amenazas potenciales, almacenando toda la información en un modelo relacional optimizado con índices, claves foráneas y constraints que garantizan la integridad referencial.\n\nLa metodología empleada incluye la revisión sistemática del estado del arte en OSINT automatizado, análisis de sentimiento y automatización de workflows, identificando cuatro papers académicos recientes (posteriores a 2022) que fundamentan el marco teórico. Se documentan exhaustivamente los endpoints de las APIs utilizadas, los parámetros de configuración, las limitaciones de rate limiting y las estrategias de optimización implementadas. Los workflows de n8n se describen en detalle, especificando cada nodo funcional desde la recopilación hasta la generación de alertas.\n\nSe definen métricas cuantitativas de evaluación incluyendo precisión, recall, F1-score, tiempo promedio de detección, tasa de falsos positivos y cobertura de keywords. La implementación considera aspectos éticos fundamentales como el tratamiento de datos personales, límites legales de OSINT, políticas de retención y técnicas de anonimización, alineándose con la normativa argentina de protección de datos personales (Ley 25.326) y estándares internacionales.\n\nLos resultados esperados demuestran la viabilidad de automatizar el proceso de monitoreo OSINT con recursos computacionales limitados, reduciendo significativamente el tiempo de detección de amenazas potenciales y eliminando sesgos inherentes al análisis manual. La solución propuesta es escalable, auditable y adaptable a diferentes contextos de inteligencia, constituyendo un aporte significativo para equipos de ciberseguridad en organizaciones públicas y privadas con presupuestos acotados.`,
     images: [
       "/projects/osint_nsg_1.png"
     ]
@@ -119,14 +111,14 @@ export const ABOUT_TEXTS = {
   title: "SOBRE MÍ",
   description: [
     "> Estudiante Técnico en Programación.",
-    "> Programador Fullstack. Enfocado más en el backend.",
+    "> Programador enfocado en el análisis de datos y ciberseguridad.",
     "> Aportando mi granito de arena a este mundo lleno de retos.",
   ],
   stats: [
-    { value: "6", label: "PROYECTOS", color: "cyan" },
+    { value: "3", label: "PROYECTOS", color: "cyan" },
     { value: "2", label: "AÑOS", color: "purple" },
-    { value: "240+", label: "APORTES", color: "cyan" },
-    { value: "6", label: "LENGUAJES", color: "purple" },
+    { value: "320+", label: "APORTES", color: "cyan" },
+    { value: "5", label: "LENGUAJES", color: "purple" },
   ]
 };
 
@@ -182,3 +174,151 @@ export const NAVBAR_TEXTS = {
 export const FOOTER_TEXTS = {
   copyright: "© 2025 xHJCXDx Developer. Todos los derechos reservados."
 };
+
+export const MORE_INFO_TEXTS = {
+  title: "MÁS INFORMACIÓN",
+  buttonText: "VER MÁS DETALLES"
+};
+
+export const MORE_INFO_CATEGORIES: MoreInfoCategory[] = [
+  {
+    id: "education",
+    title: "EDUCACIÓN",
+    items: [
+      {
+        title: "Tecnicatura Electromecánica",
+        institution: "Ing. Pablo Nogués",
+        date: "2012 - 2017",
+        description: "Formación orientada a la instalación, mantenimiento y reparación de sistemas eléctricos y mecánicos. Realicé prácticas semestrales en diversos talleres, adquiriendo experiencia en el uso de herramientas y maquinaria CNC, interpretación de planos, montaje de circuitos.",
+        image: "/logos/ipn.png",
+        url: "https://dti.mendoza.edu.ar/gem/ingreso/publico/escuela/1099/2",
+        button: "Web"
+      },
+      {
+        title: "Ingeniería en Mecatrónica",
+        institution: "Universidad Nacional de Cuyo",
+        date: "2018 - 2023",
+        description: "Formación de pensamiento analítico y profundización en la comprensión de los fundamentos de las ciencias básicas aplicadas a la ingeniería.",
+        image: "/logos/unc.png",
+        url: "https://ingenieria.uncuyo.edu.ar/",
+        button: "Web"
+      },
+      {
+        title: "Tecnicatura en Programación",
+        institution: "UTN - Facultad Regional Mendoza",
+        date: "2023 - Presente",
+        description: "Formación integral en desarrollo de software, algoritmos y estructuras de datos.",
+        image: "/logos/utn.png",
+        url: "https://www4.frm.utn.edu.ar/",
+        button: "Web"
+      }
+    ]
+  },
+  {
+    id: "experiencia",
+    title: "EXPERIENCIA",
+    items: [
+      {
+        title: "Servicio de reparación de equipos informáticos",
+        institution: "Autónomo",
+        date: "2018 - 2021",
+        description: "Realicé reparación y mantenimiento de equipos informáticos, (teléfonos celulares, computadoras de escritorio y notebooks).",
+        image: "/jobs/rp.png"
+      },
+      {
+        title: "Jefe de equipo de soporte informático",
+        institution: "Ejército Argentino",
+        date: "2021 - 2025",
+        description: "Realicé diferentes rubros como administración de documentación y informático. Parte de un equipo informático(SCD), a cargo del mantenimiento y reparación de equipos, así como de la gestión y mantenimiento de red.",
+        image: "/jobs/ea.png",
+        url: "https://www.linkedin.com/company/ejercitoargentino/",
+        button: "Linkedin"
+      },
+      {
+        title: "Auditor",
+        institution: "Millan S. A.",
+        date: "2025",
+        description: "Realicé auditorías internas para asegurar la correcta distribución de los pedidos. Elaboración de balances de saldos en diversas sucursales. Control de inventario físico y documental, identificando discrepancias y proponiendo acciones correctivas..",
+        image: "/jobs/millan.png",
+        url: "https://www.linkedin.com/company/millan-s.-a./",
+        button: "Linkedin"
+      },
+      {
+        title: "Técnico en Laboratorio",
+        institution: "Telebit S. A.",
+        date: "2025 - 2026",
+        description: "Realizo control de calidad, calibración de equipos y soporte técnico especializado. Experto en garantizar la precisión de procesos mediante el cumplimiento de normativas internacionales y la optimización de protocolos de ensayo.",
+        image: "/jobs/telebit.png",
+        url: "https://www.linkedin.com/company/telebit-s.a./",
+        button: "Linkedin"
+      }
+    ]
+  },
+  {
+    id: "certifications",
+    title: "CERTIFICACIONES",
+    items: [
+      {
+        title: "Fundamentos de la ciberseguridad",
+        institution: "IBM",
+        date: "2026",
+        description: "Curso sobre los fundamentos de la ciberseguridad",
+        image: "/certificates/ibm_cybersecurity_fundamentals.png",
+        url: "https://www.credly.com/badges/7c232a79-92ef-4eee-a310-a1aee3f9b5de/public_url",
+        button: "Ver credencial"
+      },
+      {
+        title: "Fundamentos de datos",
+        institution: "IBM",
+        date: "2026",
+        description: "Curso sobre los fundamentos del analizamiento de datos",
+        image: "/certificates/ibm_data_fundamentals.png",
+        url: "https://www.credly.com/badges/1c49c0c0-6874-4cee-8069-6b9ec26240c5/public_url",
+        button: "Ver credencial"
+      },
+      {
+        title: "Fundamentos de la inteligencia artificial",
+        institution: "IBM",
+        date: "2026",
+        description: "Curso sobre los fundamentos de la IA",
+        image: "/certificates/ia_ibm.png",
+        url: "https://www.credly.com/badges/d346340a-61f0-4319-89a6-137424938701/public_url",
+        button: "Ver credencial"
+      }
+    ]
+  }
+];
+
+export const BEYOND_CODE_TEXTS = {
+  title: "MÁS ALLÁ DEL CÓDIGO",
+  buttonText: "DESCUBRIR MI LADO PERSONAL"
+};
+
+export const BEYOND_CODE_ITEMS: TimelineItem[] = [
+  {
+    year: "2018 - Presente",
+    title: "Fotografía",
+    description: "Capturando momentos únicos y explorando la composición visual en mi tiempo libre.",
+    icon: Camera,
+    image: "/hobbies/photography.jpg"
+  },
+  {
+    year: "2010 - Presente",
+    title: "Videojuegos",
+    description: "Apasionado por las narrativas inmersivas y el diseño de mecánicas de juego.",
+    icon: Gamepad2,
+    image: "/hobbies/gaming.jpg"
+  },
+  {
+    year: "Hábito Diario",
+    title: "Café & Lectura",
+    description: "Disfrutando de un buen libro acompañado de café de especialidad.",
+    icon: Coffee
+  },
+  {
+    year: "Siempre",
+    title: "Música",
+    description: "Explorando nuevos géneros y encontrando inspiración en el sonido.",
+    icon: Music
+  }
+];
