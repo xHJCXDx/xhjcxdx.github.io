@@ -146,8 +146,8 @@ export const ABOUT_TEXTS = {
   title: "ABOUT",
   description: [
     "> Technical Student in Programming.",
-    "> Programmer focused on data analysis and cybersecurity.",
-    "> Contributing my bit to this world full of challenges.",
+    "> Programmer specializing in cybersecurity and data analysis.",
+    "> Constantly updating technical expertise.",
   ],
   stats: [
     { value: "3", label: "PROJECTS", color: "blue" },
@@ -251,7 +251,7 @@ export const MORE_INFO_CATEGORIES: MoreInfoCategory[] = [
   },
   {
     id: "experience",
-    title: "EXPERIENCE",
+    title: "ADDITIONAL PROFESSIONAL EXPERIENCE",
     items: [
       {
         title: "Computer Equipment Repair Service",

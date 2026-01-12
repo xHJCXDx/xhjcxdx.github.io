@@ -138,7 +138,7 @@ export const ABOUT_TEXTS = {
   description: [
     "> Estudiante Técnico en Programación.",
     "> Programador enfocado en el análisis de datos y ciberseguridad.",
-    "> Aportando mi granito de arena a este mundo lleno de retos.",
+    "> En constante actualización técnica.",
   ],
   stats: [
     { value: "3", label: "PROYECTOS", color: "blue" },
@@ -242,7 +242,7 @@ export const MORE_INFO_CATEGORIES: MoreInfoCategory[] = [
   },
   {
     id: "experiencia",
-    title: "EXPERIENCIA",
+    title: "EXPERIENCIA PROFESIONAL COMPLEMENTARIA",
     items: [
       {
         title: "Servicio de reparación de equipos informáticos",
