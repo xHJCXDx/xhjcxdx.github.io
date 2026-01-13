@@ -35,17 +35,22 @@ export const BeyondCode: React.FC = () => {
                                         <span className="inline-block px-3 py-1 bg-green-100 dark:bg-green-500/20 text-green-700 dark:text-green-300 text-xs rounded-full font-mono mb-3 border border-green-600/30 dark:border-green-500/30">
                                             {item.year}
                                         </span>
-                                        <p className="text-gray-700 dark:text-gray-400 text-sm font-mono leading-relaxed mb-4">
+                                        <p className="text-gray-700 dark:text-gray-400 text-sm font-mono leading-relaxed mb-4 whitespace-pre-line">
                                             {item.description}
                                         </p>
                                         
-                                        {item.image && (
-                                            <div className="overflow-hidden rounded-lg border border-green-600/20 dark:border-green-500/20 bg-white dark:bg-black/40">
-                                                <img 
-                                                    src={item.image} 
-                                                    alt={item.title} 
-                                                    className="w-full h-40 object-cover hover:scale-105 transition-transform duration-500"
-                                                />
+                                        {/* Mobile Images (Visible only on mobile inside the card) */}
+                                        {item.images && item.images.length > 0 && (
+                                            <div className="md:hidden mt-4 grid gap-4 grid-cols-1">
+                                                {item.images.map((img, imgIndex) => (
+                                                    <div key={imgIndex} className="overflow-hidden rounded-lg border border-green-600/20 dark:border-green-500/20 bg-white dark:bg-black/40">
+                                                        <img 
+                                                            src={img} 
+                                                            alt={`${item.title} ${imgIndex + 1}`} 
+                                                            className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                                                        />
+                                                    </div>
+                                                ))}
                                             </div>
                                         )}
                                     </div>
@@ -56,8 +61,22 @@ export const BeyondCode: React.FC = () => {
                                     <div className="absolute inset-0 bg-blue-400 rounded-full opacity-0 hover:opacity-100 animate-ping"></div>
                                 </div>
 
-                                {/* Empty space for the other side (Desktop only) */}
-                                <div className="hidden md:block md:w-[45%]"></div>
+                                {/* Images Side (Desktop Only) */}
+                                <div className="hidden md:block md:w-[45%]">
+                                    {item.images && item.images.length > 0 && (
+                                        <div className="grid gap-4 grid-cols-1">
+                                            {item.images.map((img, imgIndex) => (
+                                                <div key={imgIndex} className="overflow-hidden rounded-lg border border-green-600/20 dark:border-green-500/20 bg-white dark:bg-black/40 shadow-lg hover:shadow-green-500/20 transition-all duration-300">
+                                                    <img 
+                                                        src={img} 
+                                                        alt={`${item.title} ${imgIndex + 1}`} 
+                                                        className="w-full h-auto object-cover hover:scale-105 transition-transform duration-500"
+                                                    />
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
                             </div>
                         );
                     })}

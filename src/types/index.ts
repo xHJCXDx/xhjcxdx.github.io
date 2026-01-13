@@ -69,5 +69,5 @@ export interface TimelineItem {
   title: string;
   description: string;
   icon?: LucideIcon;
-  image?: string;
+  images?: string[];
 }

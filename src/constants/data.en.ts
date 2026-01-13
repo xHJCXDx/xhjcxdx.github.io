@@ -1,4 +1,4 @@
-import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Music, Camera, Gamepad2, Coffee } from 'lucide-react';
+import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Music, Shield, PersonStanding, Coffee } from 'lucide-react';
 import type { NavItem, SkillCategory, Project, ContactMethod, MoreInfoCategory, TimelineItem } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
@@ -331,29 +331,17 @@ export const BEYOND_CODE_TEXTS = {
 
 export const BEYOND_CODE_ITEMS: TimelineItem[] = [
   {
-    year: "2018 - Present",
-    title: "Photography",
-    description: "Capturing unique moments and exploring visual composition in my free time.",
-    icon: Camera,
-    image: "/hobbies/photography.jpg"
+    year: "Discipline - Skill - Self-control",
+    title: "Operations",
+    description: "• Unit Standard Bearer Escort.\n\n• Firearms Course\n\n• Security Course",
+    icon: Shield,
+    images: ["/hobbies/escolta.png", "/hobbies/c_armas.png", "/hobbies/c_iusp.png"]
   },
   {
-    year: "2010 - Present",
-    title: "Video Games",
-    description: "Passionate about immersive narratives and game mechanics design.",
-    icon: Gamepad2,
-    image: "/hobbies/gaming.jpg"
-  },
-  {
-    year: "Daily Habit",
-    title: "Coffee & Reading",
-    description: "Enjoying a good book accompanied by specialty coffee.",
-    icon: Coffee
-  },
-  {
-    year: "Always",
-    title: "Music",
-    description: "Exploring new genres and finding inspiration in sound.",
-    icon: Music
+    year: "Performance - Dedication - Demand",
+    title: "Resilience",
+    description: "I consider myself a movement enthusiast. Whether jogging, cycling, or climbing, I always look for an excuse to be active, especially if it's with the mountain by my side.",
+    icon: PersonStanding,
+    images: ["/hobbies/resiliencia2.png", "/hobbies/resiliencia4.png"]
   }
 ];

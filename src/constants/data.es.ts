@@ -1,4 +1,4 @@
-import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Music, Camera, Gamepad2, Coffee } from 'lucide-react';
+import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Music, Shield, PersonStanding, Coffee } from 'lucide-react';
 import type { NavItem, SkillCategory, Project, ContactMethod, MoreInfoCategory, TimelineItem } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
@@ -322,29 +322,17 @@ export const BEYOND_CODE_TEXTS = {
 
 export const BEYOND_CODE_ITEMS: TimelineItem[] = [
   {
-    year: "2018 - Presente",
-    title: "Fotografía",
-    description: "Capturando momentos únicos y explorando la composición visual en mi tiempo libre.",
-    icon: Camera,
-    image: "/hobbies/photography.jpg"
+    year: "Disciplina - Destreza - Autocontrol",
+    title: "Operatividad",
+    description: "• Escolta de Estandarte de Unidad.\n\n• Curso de Armas de fuego\n\n• Curso de seguridad",
+    icon: Shield,
+    images: ["/hobbies/escolta.png", "/hobbies/c_armas.png", "/hobbies/c_iusp.png"]
   },
   {
-    year: "2010 - Presente",
-    title: "Videojuegos",
-    description: "Apasionado por las narrativas inmersivas y el diseño de mecánicas de juego.",
-    icon: Gamepad2,
-    image: "/hobbies/gaming.jpg"
-  },
-  {
-    year: "Hábito Diario",
-    title: "Café & Lectura",
-    description: "Disfrutando de un buen libro acompañado de café de especialidad.",
-    icon: Coffee
-  },
-  {
-    year: "Siempre",
-    title: "Música",
-    description: "Explorando nuevos géneros y encontrando inspiración en el sonido.",
-    icon: Music
+    year: "Rendimiento - Dedicación - Exigencia",
+    title: "Resiliencia",
+    description: "Me considero un entusiasta del movimiento. Ya sea trotando, en bici o escalando, siempre busco una excusa para estar activo, especialmente si es con la montaña a mi lado.",
+    icon: PersonStanding,
+    images: ["/hobbies/resiliencia2.png", "/hobbies/resiliencia4.png"]
   }
 ];
