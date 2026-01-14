@@ -1,4 +1,4 @@
-import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Music, Shield, PersonStanding, Coffee } from 'lucide-react';
+import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Shield, PersonStanding } from 'lucide-react';
 import type { NavItem, SkillCategory, Project, ContactMethod, MoreInfoCategory, TimelineItem } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
@@ -152,7 +152,7 @@ export const ABOUT_TEXTS = {
   stats: [
     { value: "3", label: "PROJECTS", color: "blue" },
     { value: "2", label: "YEARS", color: "green" },
-    { value: "320+", label: "INPUTS", color: "blue" },
+    { value: "400+", label: "INPUTS", color: "blue" },
     { value: "5", label: "LANGUAGES", color: "green" },
   ]
 };
