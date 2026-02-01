@@ -36,7 +36,7 @@ export const Projects: React.FC = () => {
             const isEven = index % 2 === 0;
             return (
               <div key={index} className={`relative flex items-center md:justify-between ${isEven ? 'md:flex-row' : 'md:flex-row-reverse'} flex-col md:gap-8`}>
-                
+
                 {/* Timeline Dot (Desktop) */}
                 <div className="absolute left-4 md:left-1/2 w-4 h-4 rounded-full bg-blue-500 border-4 border-gray-900 z-10 transform -translate-x-1/2 hidden md:block"></div>
 
@@ -52,8 +52,8 @@ export const Projects: React.FC = () => {
                 <div className="w-full md:w-5/12 pl-12 md:pl-0">
                   {/* Mobile Date & Line */}
                   <div className="md:hidden flex items-center mb-4 space-x-4">
-                     <div className="w-2 h-2 rounded-full bg-blue-500"></div>
-                     <span className="font-mono text-blue-400 font-bold">{project.date}</span>
+                    <div className="w-2 h-2 rounded-full bg-blue-500"></div>
+                    <span className="font-mono text-blue-400 font-bold">{project.date}</span>
                   </div>
                   <div className="absolute left-5 top-0 bottom-0 w-px bg-blue-400/30 md:hidden"></div>
 
@@ -62,7 +62,7 @@ export const Projects: React.FC = () => {
                       <h3 className="text-lg font-mono font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {project.title}
                       </h3>
-                      <div className={`px-2 py-1 text-xs font-mono whitespace-nowrap ${project.status === 'FILLED' || project.status === 'COMPLETADO'
+                      <div className={`px-2 py-1 text-xs font-mono whitespace-nowrap ${project.status === 'COMPLETED' || project.status === 'COMPLETADO'
                         ? 'bg-green-100 text-green-700 dark:bg-green-500/20 dark:text-green-400 border border-green-600/50 dark:border-green-500/50'
                         : 'bg-yellow-100 text-yellow-700 dark:bg-yellow-500/20 dark:text-yellow-400 border border-yellow-600/50 dark:border-yellow-500/50'
                         }`}>

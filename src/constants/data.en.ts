@@ -66,7 +66,7 @@ export const PROJECTS: Project[] = [
     tech: "Python",
     description: "Desktop Tool for Computational Physics",
     date: "2024",
-    status: "FILLED",
+    status: "COMPLETED",
     longDescription: `CPhysics is a desktop application developed in Python and PySide6, designed to solve computational physics problems. The tool offers an intuitive graphical interface that allows users to perform calculations and visualize data in various areas of physics, including kinematics, dynamics, thermodynamics, waves, and electromagnetism.
 The project’s modular architecture facilitates interactive simulation and analysis of results through graphs generated with popular libraries like Matplotlib and Seaborn. This makes CPhysics an excellent resource for students and enthusiasts.`,
     images: [
@@ -79,7 +79,7 @@ The project’s modular architecture facilitates interactive simulation and anal
     tech: "HTML - CSS - PHP",
     description: "Afternoon Tea Events Page",
     date: "2025",
-    status: "UNDER DEVELOPMENT",
+    status: "DEVELOPING",
     longDescription: `We developed a web solution that combines essential functionality with a premium aesthetic. This project arose from the challenge of taking an event planning SME to the next competitive level. With optimized navigation and a contemporary visual style, we demonstrated that well-executed simplicity is the most powerful tool for standing out in today's market.`,
     images: [
       "/projects/deleitarte_1.png"
@@ -90,7 +90,7 @@ The project’s modular architecture facilitates interactive simulation and anal
     tech: "N8N - PostgreSQL - Docker",
     description: "Tool used to collect, analyze and make decisions based on legally available public information",
     date: "2025",
-    status: "UNDER DEVELOPMENT",
+    status: "DEVELOPING",
     longDescription: `Automated architecture that integrates public Twitter/X and Reddit APIs with workflows developed in n8n, incorporating sentiment analysis using open-source tools (VADER and TextBlob), structured storage in PostgreSQL, and automatic generation of operational alerts via Slack and email.
 
 The designed solution enables continuous collection of relevant mentions based on predefined keywords, applying natural language processing techniques to classify sentiment and criticality of each mention. The system implements mechanisms for deduplication, data normalization, and automatic classification of potential threats, storing all information in an optimized relational model with indexes, foreign keys, and constraints guaranteeing referential integrity.
@@ -103,6 +103,22 @@ Expected results demonstrate the feasibility of automating the OSINT monitoring 
     images: [
       "/projects/osint_nsg_1.png"
     ]
+  },
+  {
+    title: "Hiro",
+    tech: "VITE - MongoDB - TypeScript - Tailwind CSS",
+    description: "A personal digital space that centralizes and showcases my professional experience with a modern and accessible design.",
+    date: "2026",
+    status: "COMPLETED",
+    longDescription: `This web solution is a high-performance Single Page Application (SPA) built on the React 18 and TypeScript ecosystem, prioritizing type safety and long-term code maintainability. The architecture follows a modular, component-oriented approach, decoupling business logic from the presentation layer through the use of custom hooks and global contexts.
+
+The user interface implements a pixel-perfect, fully responsive design using Tailwind CSS with a usability-first methodology, enabling optimized style loading and seamless adaptation to any viewport.
+The system integrates global state management via the React context API to orchestrate complex cross-functionalities, such as a real-time internationalization engine (i18n) and a dynamic theming system (dark/light mode) with preference persistence. The development and build cycle is powered by Vite, ensuring efficient bundling, hot module replacement (HMR), and aggressive optimization of static resources to maximize Core Web Vitals metrics and end-user experience.`,
+    images: [
+      "/projects/hiro_home.png",
+      "/projects/hiro_notes.png"
+    ],
+    liveDemoUrl: "https://hiro-roan.vercel.app/"
   }
 
 ];

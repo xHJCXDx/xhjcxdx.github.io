@@ -29,7 +29,7 @@ export interface Project {
   tech: string;
   description: string;
   date?: string;
-  status: 'FILLED' | 'UNDER DEVELOPMENT' | 'COMPLETADO' | 'EN DESARROLLO' | 'COMPLETED';
+  status: 'DEVELOPING' | 'COMPLETADO' | 'DESARROLLO' | 'COMPLETED';
   githubUrl?: string;
   longDescription: string;
   images?: string[];

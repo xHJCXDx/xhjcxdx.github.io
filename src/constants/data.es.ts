@@ -78,7 +78,7 @@ export const PROJECTS: Project[] = [
     tech: "HTML - CSS - PHP",
     description: "Página de eventos de mediatarde",
     date: "2025",
-    status: "EN DESARROLLO",
+    status: "DESARROLLO",
     longDescription: `Desarrollamos una solución web que combina funcionalidad esencial con una estética premium. Este proyecto surgió del reto de impulsar a una pyme de planificación de eventos al siguiente nivel competitivo. Con una navegación optimizada y un estilo visual contemporáneo, demostramos que la simplicidad bien ejecutada es la herramienta más poderosa para destacar en el mercado actual.`,
     images: [
       "/projects/deleitarte_1.png"
@@ -89,13 +89,29 @@ export const PROJECTS: Project[] = [
     tech: "N8N - PostgreSQL - Docker",
     description: "Herramienta utilizada para recolectar, analizar y tomar decisiones basadas en información pública disponible legalmente",
     date: "2025",
-    status: "EN DESARROLLO",
+    status: "DESARROLLO",
     longDescription: `Arquitectura automatizada que integra las APIs públicas de Twitter/X y Reddit con flujos de trabajo desarrollados en n8n, incorporando análisis de sentimiento mediante herramientas open-source (VADER y TextBlob), almacenamiento estructurado en PostgreSQL y generación automática de alertas operativas vía Slack y correo electrónico.\n\nLa solución diseñada permite la recopilación continua de menciones relevantes basadas en keywords predefinidos, aplicando técnicas de procesamiento de lenguaje natural para clasificar el sentimiento y la criticidad de cada mención. El sistema implementa mecanismos de deduplicación, normalización de datos y clasificación automática de amenazas potenciales, almacenando toda la información en un modelo relacional optimizado con índices, claves foráneas y constraints que garantizan la integridad referencial.\n\nLa metodología empleada incluye la revisión sistemática del estado del arte en OSINT automatizado, análisis de sentimiento y automatización de workflows, identificando cuatro papers académicos recientes (posteriores a 2022) que fundamentan el marco teórico. Se documentan exhaustivamente los endpoints de las APIs utilizadas, los parámetros de configuración, las limitaciones de rate limiting y las estrategias de optimización implementadas. Los workflows de n8n se describen en detalle, especificando cada nodo funcional desde la recopilación hasta la generación de alertas.\n\nSe definen métricas cuantitativas de evaluación incluyendo precisión, recall, F1-score, tiempo promedio de detección, tasa de falsos positivos y cobertura de keywords. La implementación considera aspectos éticos fundamentales como el tratamiento de datos personales, límites legales de OSINT, políticas de retención y técnicas de anonimización, alineándose con la normativa argentina de protección de datos personales (Ley 25.326) y estándares internacionales.\n\nLos resultados esperados demuestran la viabilidad de automatizar el proceso de monitoreo OSINT con recursos computacionales limitados, reduciendo significativamente el tiempo de detección de amenazas potenciales y eliminando sesgos inherentes al análisis manual. La solución propuesta es escalable, auditable y adaptable a diferentes contextos de inteligencia, constituyendo un aporte significativo para equipos de ciberseguridad en organizaciones públicas y privadas con presupuestos acotados.`,
     images: [
       "/projects/osint_nsg_1.png"
     ]
-  }
+  },
+  {
+    title: "Hiro",
+    tech: "VITE - MongoDB - TypeScript - Tailwind CSS",
+    description: "Espacio digital personal que centraliza y exhibe mi experiencia profesional con un diseño moderno y accesible.",
+    date: "2026",
+    status: "COMPLETADO",
+    longDescription: `Esta solución web es una Single Page Application (SPA) de alto rendimiento desarrollada sobre el ecosistema de React 18 y TypeScript, priorizando la seguridad de tipos y la mantenibilidad del código a largo plazo. La arquitectura sigue un enfoque modular orientado a componentes, desacoplando la lógica de negocio de la capa de presentación mediante el uso de Custom Hooks y contextos globales.
 
+La interfaz de usuario implementa un diseño pixel-perfect y totalmente responsivo utilizando Tailwind CSS bajo una metodología utility-first, lo que permite una carga de estilos optimizada y una adaptación fluida a cualquier viewport. El sistema integra una gestión de estado global a través de React Context API para orquestar funcionalidades transversales complejas, como un motor de internacionalización (i18n) en tiempo real y un sistema de theming dinámico (Dark/Light mode) con persistencia de preferencias.
+
+El ciclo de desarrollo y construcción está potenciado por Vite, garantizando un bundling eficiente, Hot Module Replacement (HMR) instantáneo y una optimización agresiva de assets estáticos para maximizar las métricas de Core Web Vitals y la experiencia de usuario final.`,
+    images: [
+      "/projects/hiro_home.png",
+      "/projects/hiro_notes.png"
+    ],
+    liveDemoUrl: "https://hiro-roan.vercel.app/"
+  }
 ];
 
 export const CONTACT_METHODS: ContactMethod[] = [
