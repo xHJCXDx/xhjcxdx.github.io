@@ -121,6 +121,13 @@ The system integrates global state management via the React context API to orche
       "/projects/hiro_notes.png"
     ],
     liveDemoUrl: "https://hiro-roan.vercel.app/"
+  },
+  {
+    title: "SIG_telebit",
+    tech: "Planned: PostgreSQL - Vite - Tailwind CSS - Docker",
+    description: "Nonconformity management system for TELEBIT S.A.",
+    status: "DEVELOPING",
+    longDescription: `SIG_telebit is a nonconformity management system for TELEBIT S.A., currently in development. PostgreSQL, Vite, Tailwind CSS and Docker are planned technologies.`
   }
 
 ];
@@ -168,7 +175,7 @@ export const ABOUT_TEXTS = {
     "> Constantly updating technical expertise.",
   ],
   stats: [
-    { value: "3", label: "PROJECTS", color: "blue" },
+    { value: "5", label: "PROJECTS", color: "blue" },
     { value: "2", label: "YEARS", color: "green" },
     { value: "400+", label: "INPUTS", color: "blue" },
     { value: "5", label: "LANGUAGES", color: "green" },

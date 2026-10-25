@@ -113,6 +113,13 @@ El ciclo de desarrollo y construcción está potenciado por Vite, garantizando u
       "/projects/hiro_notes.png"
     ],
     liveDemoUrl: "https://hiro-roan.vercel.app/"
+  },
+  {
+    title: "SIG_telebit",
+    tech: "Planificado: PostgreSQL - Vite - Tailwind CSS - Docker",
+    description: "Sistema de gestión de no conformidades para TELEBIT S.A.",
+    status: "DESARROLLO",
+    longDescription: `SIG_telebit es un sistema de gestión de no conformidades para TELEBIT S.A., actualmente en desarrollo. Se prevé utilizar PostgreSQL, Vite, Tailwind CSS y Docker.`
   }
 ];
 
@@ -159,7 +166,7 @@ export const ABOUT_TEXTS = {
     "> En constante actualización técnica.",
   ],
   stats: [
-    { value: "3", label: "PROYECTOS", color: "blue" },
+    { value: "5", label: "PROYECTOS", color: "blue" },
     { value: "2", label: "AÑOS", color: "green" },
     { value: "400+", label: "APORTES", color: "blue" },
     { value: "5", label: "LENGUAJES", color: "green" },
