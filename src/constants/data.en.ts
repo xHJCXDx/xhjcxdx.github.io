@@ -91,7 +91,7 @@ The project’s modular architecture facilitates interactive simulation and anal
     description: "Tool used to collect, analyze and make decisions based on legally available public information",
     date: "2025",
     status: "DEVELOPING",
-    longDescription: `Automated architecture that integrates public Twitter/X and Reddit APIs with workflows developed in n8n, incorporating sentiment analysis using open-source tools (VADER and TextBlob), structured storage in PostgreSQL, and automatic generation of operational alerts via Slack and email.
+    longDescription: `Automated architecture that integrates public information from GitHub, Exploit-DB, and Hacker News with workflows developed in n8n, incorporating sentiment analysis using open-source tools (VADER and TextBlob), structured storage in PostgreSQL, and automatic generation of operational alerts via Slack and email.
 
 The designed solution enables continuous collection of relevant mentions based on predefined keywords, applying natural language processing techniques to classify sentiment and criticality of each mention. The system implements mechanisms for deduplication, data normalization, and automatic classification of potential threats, storing all information in an optimized relational model with indexes, foreign keys, and constraints guaranteeing referential integrity.
 
@@ -101,7 +101,9 @@ Quantitative evaluation metrics are defined, including accuracy, recall, F1-scor
 
 Expected results demonstrate the feasibility of automating the OSINT monitoring process with limited computational resources, significantly reducing time required to detect potential threats and eliminating biases inherent in manual analysis. The proposed solution is scalable, auditable, and adaptable to different intelligence contexts, making a significant contribution to cybersecurity teams in public and private organizations with limited budgets.`,
     images: [
-      "/projects/osint_nsg_1.png"
+      "/projects/osint_nsg_1.png",
+      "/projects/osint_nsg_2.png",
+      "/projects/osint_nsg_3.png"
     ]
   },
   {
