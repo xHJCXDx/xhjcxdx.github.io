@@ -7,8 +7,7 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-#Dependencias
-package-lock.json
+# Dependencies
 node_modules
 dist-ssr
 *.local
@@ -23,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+*.atl
+
+# Generated output and local agent state
+/dist/
+/.atl/
+*.tsbuildinfo
