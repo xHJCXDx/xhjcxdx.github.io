@@ -1,12 +1,7 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
-import * as en from '@/constants/data.en';
-import * as es from '@/constants/data.es';
+import { createContext, useContext } from 'react';
+import type * as en from '@/constants/data.en';
 
-// Translations
-
-const translations = { en, es };
-
-type Language = 'en' | 'es';
+export type Language = 'en' | 'es';
 
 interface LanguageContextType {
   language: Language;
@@ -14,22 +9,7 @@ interface LanguageContextType {
   texts: typeof en;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-
-export const LanguageProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
-  const [language, setLanguage] = useState<Language>('en');
-  const [texts, setTexts] = useState(translations[language]);
-
-  useEffect(() => {
-    setTexts(translations[language]);
-  }, [language]);
-
-  return (
-    <LanguageContext.Provider value={{ language, setLanguage, texts }}>
-      {children}
-    </LanguageContext.Provider>
-  );
-};
+export const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export const useLanguage = () => {
   const context = useContext(LanguageContext);
