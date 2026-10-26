@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
+import { Console } from '@/components/console/Console';
 
-export const Home: React.FC = () => {
+interface HomeProps {
+  setActiveSection: (section: string) => void;
+}
+
+export const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
     const { texts } = useLanguage();
     const [displayText, setDisplayText] = useState('');
     const fullText = texts.HOME_TEXTS.title;
@@ -63,12 +68,9 @@ export const Home: React.FC = () => {
             ))}
             </div>
 
-            <ChevronDown className="text-gray-500 dark:text-gray-400 animate-bounce mx-auto" size={32} />
-            <div className="space-y-6 text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
-                <p>
-                    {texts.HOME_TEXTS.quote}
-                </p>
-            </div>
+            <Console setActiveSection={setActiveSection} />
+
+            <ChevronDown className="text-gray-500 dark:text-gray-400 animate-bounce mx-auto mt-8" size={32} />
         </div>
         </section>
     );

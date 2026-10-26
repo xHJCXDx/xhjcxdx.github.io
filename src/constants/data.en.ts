@@ -165,7 +165,36 @@ export const HOME_TEXTS = {
     { name: "JAVA", color: "blue" },
     { name: "PYTHON", color: "yellow" },
   ],
-  quote: "> The beauty of simplicity",
+};
+
+export const CONSOLE_TEXTS = {
+  placeholder: "type help to start...",
+  unknownCommand: (cmd: string) => `command not found: ${cmd}. Type "help" for available commands.`,
+  help: [
+    "help        — show available commands",
+    "about       — about me summary",
+    "skills      — list skill categories",
+    "projects    — list projects",
+    "contact     — show contact methods",
+    "goto <sec>  — navigate to section (home, about, skills, projects, contact)",
+    "whoami      — who am I",
+    "lang [en|es] — switch language",
+    "theme       — toggle dark/light mode",
+    "clear       — clear console output",
+  ],
+  about: [
+    "Technical Student in Programming.",
+    "Programmer specializing in cybersecurity and data analysis.",
+    "Constantly updating technical expertise.",
+  ],
+  whoami: "Hiro — Developer | Cybersecurity & Data Analysis",
+  gotoSuccess: (section: string) => `navigating to ${section}...`,
+  gotoUsage: 'usage: goto <section> (home, about, skills, projects, contact)',
+  gotoInvalid: (section: string) => `unknown section: "${section}". Valid: home, about, skills, projects, contact`,
+  langCurrent: (lang: string) => `current language: ${lang}`,
+  langSwitched: (lang: string) => `language switched to ${lang}`,
+  langInvalid: 'usage: lang [en|es]',
+  themeToggled: (theme: string) => `theme switched to ${theme}`,
 };
 
 export const ABOUT_TEXTS = {
