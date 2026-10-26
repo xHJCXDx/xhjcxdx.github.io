@@ -1,10 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { useConsoleCommands } from './useConsoleCommands';
+import { useConsoleCommands, type ConsoleSegment } from './useConsoleCommands';
 
 interface ConsoleProps {
   setActiveSection: (section: string) => void;
 }
+
+const colorClasses: Record<NonNullable<ConsoleSegment['color']>, string> = {
+  green: 'text-green-500 dark:text-green-400',
+  yellow: 'text-yellow-500 dark:text-yellow-400',
+  cyan: 'text-cyan-500 dark:text-cyan-400',
+  red: 'text-red-500 dark:text-red-400',
+  blue: 'text-blue-500 dark:text-blue-400',
+  purple: 'text-purple-500 dark:text-purple-400',
+};
 
 export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
   const { texts } = useLanguage();
@@ -41,12 +50,16 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
                 <span className="text-green-600 dark:text-green-500">&gt; </span>
                 {entry.input}
               </div>
-              {entry.output.map((line, j) => (
-                <div
-                  key={j}
-                  className="text-gray-600 dark:text-gray-400 pl-4 whitespace-pre"
-                >
-                  {line}
+              {entry.output.map((segments, j) => (
+                <div key={j} className="pl-4 whitespace-pre">
+                  {segments.map((s, k) => (
+                    <span
+                      key={k}
+                      className={s.color ? colorClasses[s.color] : 'text-gray-600 dark:text-gray-400'}
+                    >
+                      {s.text}
+                    </span>
+                  ))}
                 </div>
               ))}
             </div>
