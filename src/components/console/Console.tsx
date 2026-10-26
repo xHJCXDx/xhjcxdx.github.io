@@ -36,7 +36,7 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
 
   return (
     <div
-      className="w-full max-w-lg mx-auto text-left font-mono text-sm"
+      className="w-full max-w-2xl mx-auto text-left font-mono text-sm"
       onClick={() => inputRef.current?.focus()}
     >
       {history.length > 0 && (
@@ -51,7 +51,7 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
                 {entry.input}
               </div>
               {entry.output.map((segments, j) => (
-                <div key={j} className="pl-4 whitespace-pre">
+                <div key={j} className="pl-4 whitespace-pre-wrap break-words">
                   {segments.map((s, k) => (
                     <span
                       key={k}
