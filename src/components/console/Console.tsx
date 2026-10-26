@@ -33,7 +33,7 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
       {history.length > 0 && (
         <div
           ref={outputRef}
-          className="max-h-40 overflow-y-auto mb-3 space-y-2 scrollbar-thin"
+          className="max-h-40 overflow-y-auto mb-3 space-y-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {history.map((entry, i) => (
             <div key={i} className="space-y-1">
@@ -44,7 +44,7 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
               {entry.output.map((line, j) => (
                 <div
                   key={j}
-                  className="text-gray-600 dark:text-gray-400 pl-4"
+                  className="text-gray-600 dark:text-gray-400 pl-4 whitespace-pre"
                 >
                   {line}
                 </div>
@@ -66,7 +66,6 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
           autoComplete="off"
           spellCheck={false}
         />
-        <span className="animate-blink text-green-500">|</span>
       </form>
     </div>
   );
