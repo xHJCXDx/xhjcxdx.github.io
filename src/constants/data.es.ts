@@ -118,6 +118,7 @@ El ciclo de desarrollo y construcción está potenciado por Vite, garantizando u
     title: "SIG_telebit",
     tech: "Planificado: PostgreSQL - Vite - Tailwind CSS - Docker",
     description: "Sistema de gestión de no conformidades para TELEBIT S.A.",
+    date: "2026",
     status: "DESARROLLO",
     longDescription: `SIG_telebit es un sistema de gestión de no conformidades para TELEBIT S.A., actualmente en desarrollo. Se prevé utilizar PostgreSQL, Vite, Tailwind CSS y Docker.`
   }

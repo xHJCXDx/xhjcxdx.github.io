@@ -126,6 +126,7 @@ The system integrates global state management via the React context API to orche
     title: "SIG_telebit",
     tech: "Planned: PostgreSQL - Vite - Tailwind CSS - Docker",
     description: "Nonconformity management system for TELEBIT S.A.",
+    date: "2026",
     status: "DEVELOPING",
     longDescription: `SIG_telebit is a nonconformity management system for TELEBIT S.A., currently in development. PostgreSQL, Vite, Tailwind CSS and Docker are planned technologies.`
   }
