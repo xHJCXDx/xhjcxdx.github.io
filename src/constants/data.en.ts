@@ -197,6 +197,24 @@ export const CONSOLE_TEXTS = {
   langSwitched: (lang: string) => `language switched to ${lang}`,
   langInvalid: 'usage: lang [en|es]',
   themeToggled: (theme: string) => `theme switched to ${theme}`,
+  sudo: "nice try, you're not root here.",
+  rmrf: [
+    "deleting portfolio...",
+    "just kidding. nice try though.",
+  ],
+  neofetch: [
+    "  _  _ _          ",
+    " | || (_)_ _ ___  ",
+    " | __ | | '_/ _ \\ ",
+    " |_||_|_|_| \\___/ ",
+    "",
+    " OS:    Web Portfolio",
+    " Host:  xHJCXDx",
+    " Stack: React + TypeScript + Tailwind",
+    " Role:  Developer | Cybersecurity & Data",
+    " Lang:  Python, Java, SQL, JS/TS",
+    " Theme: dark (always)",
+  ],
 };
 
 export const ABOUT_TEXTS = {
