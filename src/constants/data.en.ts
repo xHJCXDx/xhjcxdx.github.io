@@ -1,5 +1,5 @@
-import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play, Shield, PersonStanding } from 'lucide-react';
-import type { NavItem, SkillCategory, Project, ContactMethod, MoreInfoCategory, TimelineItem } from '@/types';
+import { User, Zap, Briefcase, Send, Linkedin, Github, Code, Play } from 'lucide-react';
+import type { NavItem, SkillCategory, Project, ContactMethod, MoreInfoCategory } from '@/types';
 
 export const NAV_ITEMS: NavItem[] = [
   { id: 'home', label: 'START', icon: Play },
@@ -420,22 +420,7 @@ export const MORE_INFO_CATEGORIES: MoreInfoCategory[] = [
 
 export const BEYOND_CODE_TEXTS = {
   title: "BEYOND THE CODE",
-  buttonText: "DISCOVER MY PERSONAL SIDE"
+  buttonText: "DISCOVER MY PERSONAL SIDE",
+  subtitle: "Get to know me a little better through my personal space.",
+  visitLabel: "Visit"
 };
-
-export const BEYOND_CODE_ITEMS: TimelineItem[] = [
-  {
-    year: "Discipline - Skill - Self-control",
-    title: "Operations",
-    description: "• Unit Standard Bearer Escort.\n\n• Firearms Course\n\n• Security Course",
-    icon: Shield,
-    images: ["/hobbies/escolta.png", "/hobbies/c_armas.png", "/hobbies/c_iusp.png"]
-  },
-  {
-    year: "Performance - Dedication - Demand",
-    title: "Resilience",
-    description: "I consider myself a movement enthusiast. Whether jogging, cycling, or climbing, I always look for an excuse to be active, especially if it's with the mountain by my side.",
-    icon: PersonStanding,
-    images: ["/hobbies/resiliencia2.png", "/hobbies/resiliencia4.png"]
-  }
-];

@@ -62,12 +62,3 @@ export interface MoreInfoCategory {
   title: string;
   items: MoreInfoItem[];
 }
-
-// Timeline Item
-export interface TimelineItem {
-  year: string;
-  title: string;
-  description: string;
-  icon?: LucideIcon;
-  images?: string[];
-}
