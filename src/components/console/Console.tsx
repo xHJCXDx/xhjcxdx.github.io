@@ -33,6 +33,7 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
       {history.length > 0 && (
         <div
           ref={outputRef}
+          aria-live="polite"
           className="max-h-40 overflow-y-auto mb-3 space-y-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {history.map((entry, i) => (
