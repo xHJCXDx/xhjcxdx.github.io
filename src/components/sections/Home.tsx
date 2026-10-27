@@ -26,7 +26,7 @@ export const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
     return (
         <section className="min-h-screen flex items-center justify-center">
         <div className="w-full max-w-3xl px-6 lg:px-0">
-            <h1 className="font-serif text-6xl sm:text-7xl lg:text-[96px] font-normal text-charcoal dark:text-warm-gray mb-4">
+            <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl lg:text-[96px] font-normal text-charcoal dark:text-warm-gray mb-4">
             {texts.HOME_TEXTS.name}
             </h1>
 

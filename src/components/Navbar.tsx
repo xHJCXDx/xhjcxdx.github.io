@@ -70,7 +70,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
             <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
             }`}>
-            <div className="py-4 space-y-2 border-t border-gray-200 dark:border-gray-800 mt-4">
+            <div className="pt-8 pb-4 space-y-2 border-t border-gray-200 dark:border-gray-800">
                 {texts.NAV_ITEMS.map(({ id, label, icon: Icon }) => (
                 <button
                     key={id}
@@ -85,7 +85,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                     <span>{label}</span>
                 </button>
                 ))}
-                <div className="pt-4 flex items-center gap-4">
+                <div className="pt-4 flex flex-wrap items-center gap-4">
                     <LanguageSelector />
                     <ThemeToggle />
                 </div>
