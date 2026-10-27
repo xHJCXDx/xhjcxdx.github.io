@@ -46,16 +46,6 @@ export const About: React.FC = () => {
             </div>
             </div>
 
-            {/* Stats — horizontal, large numbers */}
-            <div className="flex flex-wrap justify-center gap-16 mb-16">
-            {texts.ABOUT_TEXTS.stats.map((stat) => (
-                <div key={stat.label} className="text-center">
-                    <div className="text-5xl font-serif text-charcoal dark:text-warm-gray">{stat.value}</div>
-                    <div className="text-xs uppercase tracking-widest text-muted-wc mt-2">{stat.label}</div>
-                </div>
-            ))}
-            </div>
-
             {/* More Info toggle */}
             {!showMoreInfo && (
                 <div className="flex justify-center">
