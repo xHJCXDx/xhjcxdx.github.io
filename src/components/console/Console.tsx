@@ -1,19 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { useConsoleCommands, type ConsoleSegment } from './useConsoleCommands';
+import { useConsoleCommands } from './useConsoleCommands';
 
 interface ConsoleProps {
   setActiveSection: (section: string) => void;
 }
-
-const colorClasses: Record<NonNullable<ConsoleSegment['color']>, string> = {
-  green: 'text-green-500 dark:text-green-400',
-  yellow: 'text-yellow-500 dark:text-yellow-400',
-  cyan: 'text-cyan-500 dark:text-cyan-400',
-  red: 'text-red-500 dark:text-red-400',
-  blue: 'text-blue-500 dark:text-blue-400',
-  purple: 'text-purple-500 dark:text-purple-400',
-};
 
 export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
   const { texts } = useLanguage();
@@ -36,7 +27,7 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
 
   return (
     <div
-      className="w-full max-w-2xl mx-auto text-left font-mono text-sm"
+      className="w-full max-w-lg mx-auto text-left font-mono text-sm border border-gray-200 dark:border-gray-800 p-4"
       onClick={() => inputRef.current?.focus()}
     >
       {history.length > 0 && (
@@ -46,19 +37,14 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
         >
           {history.map((entry, i) => (
             <div key={i} className="space-y-1">
-              <div className="text-green-500 dark:text-green-400">
-                <span className="text-green-600 dark:text-green-500">&gt; </span>
+              <div className="text-charcoal dark:text-warm-gray">
+                <span className="text-accent font-bold">&gt; </span>
                 {entry.input}
               </div>
               {entry.output.map((segments, j) => (
-                <div key={j} className="pl-4 whitespace-pre-wrap break-words">
+                <div key={j} className="pl-4 whitespace-pre-wrap break-words text-charcoal dark:text-warm-gray">
                   {segments.map((s, k) => (
-                    <span
-                      key={k}
-                      className={s.color ? colorClasses[s.color] : 'text-gray-600 dark:text-gray-400'}
-                    >
-                      {s.text}
-                    </span>
+                    <span key={k}>{s.text}</span>
                   ))}
                 </div>
               ))}
@@ -68,14 +54,14 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
       )}
 
       <form onSubmit={handleSubmit} className="flex items-center gap-2">
-        <span className="text-green-600 dark:text-green-500 font-bold">&gt;</span>
+        <span className="text-accent font-bold">&gt;</span>
         <input
           ref={inputRef}
           type="text"
           value={input}
           onChange={(e) => setInput(e.target.value)}
           placeholder={texts.CONSOLE_TEXTS.placeholder}
-          className="flex-1 bg-transparent border-none outline-none text-gray-800 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-600 caret-green-500"
+          className="flex-1 bg-transparent border-none outline-none text-charcoal dark:text-warm-gray placeholder-gray-400 dark:placeholder-gray-600 caret-accent"
           autoComplete="off"
           spellCheck={false}
         />
