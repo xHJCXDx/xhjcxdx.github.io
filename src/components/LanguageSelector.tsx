@@ -5,23 +5,23 @@ export const LanguageSelector: React.FC = () => {
   const { language, setLanguage } = useLanguage();
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="flex items-center space-x-3">
       <button
         onClick={() => setLanguage('en')}
-        className={`px-3 py-1 text-sm font-mono border ${
+        className={`text-xs uppercase tracking-widest transition-colors duration-300 pb-0.5 ${
           language === 'en'
-            ? 'text-green-400 border-green-400 bg-green-400/10'
-            : 'text-gray-600 dark:text-gray-400 border-transparent hover:text-blue-400'
+            ? 'text-charcoal dark:text-warm-gray border-b border-accent'
+            : 'text-muted-wc hover:text-charcoal dark:hover:text-warm-gray'
         }`}
       >
         EN
       </button>
       <button
         onClick={() => setLanguage('es')}
-        className={`px-3 py-1 text-sm font-mono border ${
+        className={`text-xs uppercase tracking-widest transition-colors duration-300 pb-0.5 ${
           language === 'es'
-            ? 'text-green-400 border-green-400 bg-green-400/10'
-            : 'text-gray-600 dark:text-gray-400 border-transparent hover:text-blue-400'
+            ? 'text-charcoal dark:text-warm-gray border-b border-accent'
+            : 'text-muted-wc hover:text-charcoal dark:hover:text-warm-gray'
         }`}
       >
         ES
