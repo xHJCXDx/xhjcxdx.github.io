@@ -1,7 +1,7 @@
 import { LucideIcon } from 'lucide-react';
 
 // Tailwind colors
-type TailwindColor = 'cyan' | 'purple' | 'yellow' | 'blue' | 'green' | 'red' | 'indigo' | 'pink' | 'orange';
+type TailwindColor = 'cyan' | 'purple' | 'yellow' | 'blue' | 'green' | 'red' | 'pink' | 'orange';
 
 // Types
 export interface NavItem {

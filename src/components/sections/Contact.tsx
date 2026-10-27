@@ -28,11 +28,9 @@ export const Contact: React.FC = () => {
         setResult(texts.CONTACT_TEXTS.form.success);
         form.reset();
       } else {
-        console.log("Error", data);
         setResult(data.message);
       }
-    } catch (error) {
-      console.error("Error submitting form:", error);
+    } catch {
       setResult(texts.CONTACT_TEXTS.form.error);
     }
 
