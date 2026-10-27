@@ -1,36 +1,37 @@
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { colorClasses } from '@/constants/styles';
+
+const opacityByLevel: Record<string, string> = {
+    High: 'opacity-100',
+    Medium: 'opacity-60',
+    Low: 'opacity-35',
+};
 
 export const Skills: React.FC = () => {
     const { texts } = useLanguage();
 
     return (
-        <section className="min-h-screen py-20 px-6">
-        <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold text-black dark:text-white mb-12 text-center border-b border-gray-300 dark:border-green-400 pb-4">
+        <section className="min-h-screen py-30 px-6 flex items-center">
+        <div className="max-w-3xl mx-auto w-full space-y-8">
+            <h2 className="font-serif text-4xl font-normal text-charcoal dark:text-warm-gray mb-12">
             {texts.SKILLS_TEXTS.title}
             </h2>
-            
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {texts.SKILL_CATEGORIES.map(({ title, skills, color }) => {
-                const classes = colorClasses[color] || colorClasses.blue;
-                return (
-                    <div key={title} className={`border-2 p-6 bg-white/50 dark:bg-transparent dark:bg-gradient-to-b dark:to-black/50 ${classes.container}`}>
-                        <h3 className={`text-2xl font-bold mb-6 text-center ${classes.title}`}>
-                            {title}
-                        </h3>
-                        <div className="space-y-3">
-                            {skills.map((skill) => (
-                            <div key={skill.name} className={`p-3 border text-center ${classes.skill[skill.level]}`}>
-                                <span>{skill.name}</span>
-                            </div>
-                            ))}
-                        </div>
+
+            {texts.SKILL_CATEGORIES.map(({ title, skills }) => (
+                <div key={title}>
+                    <h3 className="font-serif text-lg text-charcoal dark:text-warm-gray mb-3">
+                        {title}
+                    </h3>
+                    <div className="flex flex-wrap items-center">
+                        {skills.map((skill, i) => (
+                            <span key={skill.name} className={`text-charcoal dark:text-warm-gray ${opacityByLevel[skill.level] ?? 'opacity-100'}`}>
+                                {i > 0 && <span className="inline-block border-l border-gray-300 dark:border-gray-700 mx-3 h-4 align-middle" />}
+                                {skill.name}
+                            </span>
+                        ))}
                     </div>
-                );
-            })}
-            </div>
+                </div>
+            ))}
         </div>
         </section>
     );
