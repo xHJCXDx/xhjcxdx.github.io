@@ -27,8 +27,16 @@ export const Projects: React.FC = () => {
               onClick={() => setSelectedProject(project)}
               className="group relative border border-gray-200 dark:border-gray-800 aspect-[4/3] flex items-center justify-center text-left overflow-hidden transition-colors duration-300 hover:border-gray-400 dark:hover:border-gray-600"
             >
+              {/* Blurred background image */}
+              {project.images?.[0] && (
+                <div
+                  className="absolute inset-0 bg-cover bg-center blur-sm scale-105 opacity-15 dark:opacity-10 transition-opacity duration-300 group-hover:opacity-25 dark:group-hover:opacity-20"
+                  style={{ backgroundImage: `url(${project.images[0]})` }}
+                />
+              )}
+
               {/* Project name centered */}
-              <h3 className="font-serif text-2xl text-charcoal dark:text-warm-gray px-6 text-center">
+              <h3 className="relative font-serif text-2xl text-charcoal dark:text-warm-gray px-6 text-center">
                 {project.title}
               </h3>
 

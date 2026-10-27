@@ -101,8 +101,8 @@ Quantitative evaluation metrics are defined, including accuracy, recall, F1-scor
 
 Expected results demonstrate the feasibility of automating the OSINT monitoring process with limited computational resources, significantly reducing time required to detect potential threats and eliminating biases inherent in manual analysis. The proposed solution is scalable, auditable, and adaptable to different intelligence contexts, making a significant contribution to cybersecurity teams in public and private organizations with limited budgets.`,
     images: [
-      "/projects/osint_nsg_1.png",
       "/projects/osint_nsg_2.png",
+      "/projects/osint_nsg_1.png",
       "/projects/osint_nsg_3.png"
     ]
   },
@@ -160,6 +160,7 @@ export const CONTACT_METHODS: ContactMethod[] = [
 export const HOME_TEXTS = {
   name: "Hiro",
   title: "DEVELOPER",
+  subtitle: "The beauty of simplicity",
   tech: [
     { name: "SQL", color: "green" },
     { name: "JAVA", color: "blue" },
@@ -320,6 +321,24 @@ export const MORE_INFO_CATEGORIES: MoreInfoCategory[] = [
         description: "Comprehensive training in software development, algorithms, and data structures.",
         image: "/logos/utn.png",
         url: "https://www4.frm.utn.edu.ar/",
+        button: "Web"
+      },
+      {
+        title: "Systems Engineering",
+        institution: "UTN - Mendoza Regional Faculty",
+        date: "2026 - Present",
+        description: "Engineering degree focused on the design, development, and management of complex information systems and technology infrastructure.",
+        image: "/logos/utn.png",
+        url: "https://www4.frm.utn.edu.ar/",
+        button: "Web"
+      },
+      {
+        title: "Bachelor's in Cyber Defense",
+        institution: "FADENA",
+        date: "2026 - Present",
+        description: "Training in cyber defense, information security, and protection of critical digital infrastructure.",
+        image: "/logos/fadena.png",
+        url: "https://undef.edu.ar/fadena/",
         button: "Web"
       }
     ]
