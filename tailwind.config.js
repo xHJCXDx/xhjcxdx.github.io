@@ -27,7 +27,12 @@ export default {
       animation: {
         blink: 'blink 1s infinite',
         'fade-in': 'fadeIn 0.5s ease-out forwards',
-        'fade-in-up': 'fadeInUp 0.5s ease-out forwards',
+        'light-drift-1': 'lightDrift1 14s ease-in-out infinite',
+        'light-drift-2': 'lightDrift2 18s ease-in-out infinite',
+        'light-drift-3': 'lightDrift3 22s ease-in-out infinite',
+        'line-drift-1': 'lineDrift1 10s ease-in-out infinite',
+        'line-drift-2': 'lineDrift2 14s ease-in-out infinite',
+        'line-drift-3': 'lineDrift3 18s ease-in-out infinite',
       },
       keyframes: {
         blink: {
@@ -38,9 +43,29 @@ export default {
           '0%': { opacity: '0', transform: 'translateY(12px)' },
           '100%': { opacity: '1', transform: 'translateY(0)' },
         },
-        fadeInUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+        lightDrift1: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.7' },
+          '50%': { transform: 'translate(80px, -50px) scale(1.15)', opacity: '1' },
+        },
+        lightDrift2: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.6' },
+          '50%': { transform: 'translate(-70px, 40px) scale(1.2)', opacity: '1' },
+        },
+        lightDrift3: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)', opacity: '0.5' },
+          '50%': { transform: 'translate(50px, 60px) scale(1.1)', opacity: '0.9' },
+        },
+        lineDrift1: {
+          '0%, 100%': { opacity: '0.3', transform: 'translateY(0)' },
+          '50%': { opacity: '0.7', transform: 'translateY(-8px)' },
+        },
+        lineDrift2: {
+          '0%, 100%': { opacity: '0.25', transform: 'translateX(0)' },
+          '50%': { opacity: '0.65', transform: 'translateX(6px)' },
+        },
+        lineDrift3: {
+          '0%, 100%': { opacity: '0.2', transform: 'translateY(0)' },
+          '50%': { opacity: '0.6', transform: 'translateY(6px)' },
         },
       },
     },
