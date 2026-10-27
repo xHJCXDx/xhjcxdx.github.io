@@ -18,7 +18,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-black/90 backdrop-blur-md border-b border-green-500/30">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-off-black/90 backdrop-blur-md border-b border-green-500/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex justify-between items-center h-16">
             {/* Logo */}
@@ -26,7 +26,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-blue-400 overflow-hidden flex items-center justify-center">
                     <img src="/logo.svg" alt="Logo Vite" className="w-full h-full object-cover rotate-[deg]" />
                 </div>
-                <span className="text-blue-400 font-mono text-sm sm:text-lg font-bold">{texts.NAVBAR_TEXTS.logo}</span>
+                <span className="text-blue-400 text-sm sm:text-lg font-bold">{texts.NAVBAR_TEXTS.logo}</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -35,7 +35,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 <button
                     key={id}
                     onClick={() => handleNavClick(id)}
-                    className={`flex items-center space-x-2 px-3 py-2 font-mono text-sm transition-all duration-300 border ${
+                    className={`flex items-center space-x-2 px-3 py-2 text-sm transition-all duration-300 border ${
                     activeSection === id 
                         ? 'text-green-400 border-green-400 bg-green-400/10' 
                         : 'text-gray-600 dark:text-gray-400 border-transparent hover:text-blue-400 hover:border-blue-400/50'
@@ -75,7 +75,7 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 <button
                     key={id}
                     onClick={() => handleNavClick(id)}
-                    className={`w-full flex items-center space-x-3 px-4 py-3 font-mono text-sm transition-all duration-300 border-l-2 ${
+                    className={`w-full flex items-center space-x-3 px-4 py-3 text-sm transition-all duration-300 border-l-2 ${
                     activeSection === id 
                         ? 'text-green-400 border-l-green-400 bg-green-400/10' 
                         : 'text-gray-600 dark:text-gray-400 border-l-transparent hover:text-blue-400 hover:border-l-blue-400 hover:bg-blue-400/5'

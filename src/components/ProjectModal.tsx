@@ -14,7 +14,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   return (
     <div className="fixed inset-0 bg-black/75 flex justify-center z-50 p-4 overflow-y-auto py-20" onClick={onClose}>
-      <div className="bg-white dark:bg-black dark:from-green-900/80 dark:to-blue-900/30 border border-green-600/50 dark:border-green-500/50 p-8 rounded-lg max-w-3xl w-full relative text-gray-900 dark:text-white font-mono h-min shadow-xl" onClick={(e) => e.stopPropagation()}>
+      <div className="bg-white dark:bg-off-black dark:from-green-900/80 dark:to-blue-900/30 border border-green-600/50 dark:border-green-500/50 p-8 rounded-lg max-w-3xl w-full relative text-gray-900 dark:text-white h-min shadow-xl" onClick={(e) => e.stopPropagation()}>
         <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
           <X size={24} />
         </button>

@@ -50,10 +50,10 @@ export const About: React.FC = () => {
         <div className="max-w-6xl mx-auto w-full">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
             <div>
-                <h2 className="text-4xl font-mono font-bold text-gray-900 dark:text-white mb-8 border-b border-blue-400 pb-4">
+                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-8 border-b border-blue-400 pb-4">
                 {texts.ABOUT_TEXTS.title}
                 </h2>
-                <div className="space-y-6 text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
+                <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
                 {texts.ABOUT_TEXTS.description.map((text, index) => (
                     <p key={index}>{text}</p>
                 ))}
@@ -67,8 +67,8 @@ export const About: React.FC = () => {
                         const colors = getStatColorClass(stat.color);
                         return (
                             <div key={stat.label} className={`border ${colors.border} p-4`}>
-                                <div className={`text-2xl font-mono font-bold ${colors.text}`}>{stat.value}</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400 font-mono">{stat.label}</div>
+                                <div className={`text-2xl font-bold ${colors.text}`}>{stat.value}</div>
+                                <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
                             </div>
                         );
                     })}
@@ -83,7 +83,7 @@ export const About: React.FC = () => {
                         onClick={handleShowMore}
                         className="group flex flex-col items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
                     >
-                        <span className="font-mono text-sm tracking-widest">{texts.MORE_INFO_TEXTS.buttonText}</span>
+                        <span className="text-sm tracking-widest">{texts.MORE_INFO_TEXTS.buttonText}</span>
                         <ChevronDown className="animate-bounce group-hover:translate-y-1 transition-transform" />
                     </button>
                 </div>
@@ -99,7 +99,7 @@ export const About: React.FC = () => {
                                 onClick={handleShowBeyondCode}
                                 className="group flex flex-col items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
                             >
-                                <span className="font-mono text-sm tracking-widest">{texts.BEYOND_CODE_TEXTS.buttonText}</span>
+                                <span className="text-sm tracking-widest">{texts.BEYOND_CODE_TEXTS.buttonText}</span>
                                 <ChevronDown className="animate-bounce group-hover:translate-y-1 transition-transform" />
                             </button>
                         </div>

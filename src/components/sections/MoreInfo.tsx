@@ -7,14 +7,14 @@ export const MoreInfo: React.FC = () => {
 
   return (
     <div id="more-info-section" className="mt-20 pt-10 border-t border-green-600/20 dark:border-green-500/20">
-      <h2 className="text-3xl font-mono font-bold text-gray-900 dark:text-white mb-12 text-center">
+      <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
         {texts.MORE_INFO_TEXTS.title}
       </h2>
 
       <div className="space-y-16">
         {texts.MORE_INFO_CATEGORIES.map((category) => (
           <div key={category.id} className="relative">
-            <h3 className="text-xl font-mono font-bold text-blue-600 dark:text-blue-400 mb-6 flex items-center">
+            <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-6 flex items-center">
               <span className="w-8 h-[2px] bg-blue-600 dark:bg-blue-400 mr-4"></span>
               {category.title}
             </h3>
@@ -25,11 +25,11 @@ export const MoreInfo: React.FC = () => {
                   <div className="absolute -left-1 top-6 w-1 h-8 bg-green-500 group-hover:bg-blue-400 transition-colors"></div>
 
                   <div className="flex flex-col h-full pl-4">
-                    <h4 className="text-lg font-bold text-gray-900 dark:text-white font-mono mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
+                    <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-300 transition-colors">
                       {item.title}
                     </h4>
 
-                    <div className="flex items-center text-sm text-gray-600 dark:text-gray-400 font-mono mb-3 space-x-4">
+                    <div className="flex items-center text-sm text-gray-600 dark:text-gray-400 mb-3 space-x-4">
                       <div className="flex items-center">
                         <Building size={14} className="mr-2 text-green-600 dark:text-green-400" />
                         <span>{item.institution}</span>
@@ -41,7 +41,7 @@ export const MoreInfo: React.FC = () => {
                     </div>
 
                     {item.description && (
-                      <p className="text-gray-700 dark:text-gray-300 text-sm font-mono leading-relaxed mt-2">
+                      <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mt-2">
                         {item.description}
                       </p>
                     )}
@@ -58,7 +58,7 @@ export const MoreInfo: React.FC = () => {
                           </div>
                         )}
                         {item.url && (
-                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-xs font-mono text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 hover:underline">
+                          <a href={item.url} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 dark:text-blue-400 hover:text-blue-500 dark:hover:text-blue-300 hover:underline">
                             {item.button}
                           </a>
                         )}

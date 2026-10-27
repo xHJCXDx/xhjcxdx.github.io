@@ -52,17 +52,17 @@ export const Home: React.FC<HomeProps> = ({ setActiveSection }) => {
                 </div>
             </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-mono font-bold text-gray-900 dark:text-white mb-4 text-center">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-4 text-center">
             {texts.HOME_TEXTS.name}{/*<span className="text-blue-400">DEV</span> */}
             </h1>
             
-            <div className="text-lg sm:text-xl lg:text-2xl font-mono text-green-600 dark:text-green-400 mb-8 h-6 sm:h-8 text-center">
+            <div className="text-lg sm:text-xl lg:text-2xl text-green-600 dark:text-green-400 mb-8 h-6 sm:h-8 text-center">
             {displayText}<span className="animate-blink">|</span>
             </div>
             
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
             {texts.HOME_TEXTS.tech.map((tech) => (
-                <div key={tech.name} className={`px-4 sm:px-6 py-3 border ${getTechColorClass(tech.color)} font-mono text-sm`}>
+                <div key={tech.name} className={`px-4 sm:px-6 py-3 border ${getTechColorClass(tech.color)} text-sm`}>
                     {tech.name}
                 </div>
             ))}

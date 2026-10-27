@@ -8,7 +8,7 @@ export const Skills: React.FC = () => {
     return (
         <section className="min-h-screen py-20 px-6">
         <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-mono font-bold text-black dark:text-white mb-12 text-center border-b border-gray-300 dark:border-green-400 pb-4">
+            <h2 className="text-4xl font-bold text-black dark:text-white mb-12 text-center border-b border-gray-300 dark:border-green-400 pb-4">
             {texts.SKILLS_TEXTS.title}
             </h2>
             
@@ -17,13 +17,13 @@ export const Skills: React.FC = () => {
                 const classes = colorClasses[color] || colorClasses.blue;
                 return (
                     <div key={title} className={`border-2 p-6 bg-white/50 dark:bg-transparent dark:bg-gradient-to-b dark:to-black/50 ${classes.container}`}>
-                        <h3 className={`text-2xl font-mono font-bold mb-6 text-center ${classes.title}`}>
+                        <h3 className={`text-2xl font-bold mb-6 text-center ${classes.title}`}>
                             {title}
                         </h3>
                         <div className="space-y-3">
                             {skills.map((skill) => (
                             <div key={skill.name} className={`p-3 border text-center ${classes.skill[skill.level]}`}>
-                                <span className="font-mono">{skill.name}</span>
+                                <span>{skill.name}</span>
                             </div>
                             ))}
                         </div>
