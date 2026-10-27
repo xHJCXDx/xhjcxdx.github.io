@@ -6,6 +6,15 @@ interface ConsoleProps {
   setActiveSection: (section: string) => void;
 }
 
+const colorClass: Record<string, string> = {
+  green: 'text-green-500 dark:text-green-400',
+  yellow: 'text-yellow-600 dark:text-yellow-400',
+  cyan: 'text-cyan-600 dark:text-cyan-400',
+  red: 'text-red-500 dark:text-red-400',
+  blue: 'text-blue-500 dark:text-blue-400',
+  purple: 'text-purple-500 dark:text-purple-400',
+};
+
 export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
   const { texts } = useLanguage();
   const { history, execute } = useConsoleCommands(setActiveSection);
@@ -45,7 +54,7 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
               {entry.output.map((segments, j) => (
                 <div key={j} className="pl-4 whitespace-pre-wrap break-words text-charcoal dark:text-warm-gray">
                   {segments.map((s, k) => (
-                    <span key={k}>{s.text}</span>
+                    <span key={k} className={s.color ? colorClass[s.color] : undefined}>{s.text}</span>
                   ))}
                 </div>
               ))}
