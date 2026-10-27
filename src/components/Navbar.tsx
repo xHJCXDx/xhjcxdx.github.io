@@ -18,16 +18,16 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-off-black/90 backdrop-blur-md border-b border-green-500/30">
+        <nav className="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-off-black/90 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex justify-between items-center h-16">
-            {/* Logo */}
-            <div className="flex items-center space-x-2">
-                <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 border-blue-400 overflow-hidden flex items-center justify-center">
-                    <img src="/logo.svg" alt="Logo Vite" className="w-full h-full object-cover rotate-[deg]" />
-                </div>
-                <span className="text-blue-400 text-sm sm:text-lg font-bold">{texts.NAVBAR_TEXTS.logo}</span>
-            </div>
+            <div className="flex justify-between items-center h-14">
+            {/* Brand */}
+            <button
+                onClick={() => handleNavClick('home')}
+                className="text-sm font-semibold tracking-widest uppercase text-charcoal dark:text-warm-gray hover:text-accent transition-colors duration-300"
+            >
+                {texts.NAVBAR_TEXTS.logo}
+            </button>
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
@@ -35,13 +35,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 <button
                     key={id}
                     onClick={() => handleNavClick(id)}
-                    className={`flex items-center space-x-2 px-3 py-2 text-sm transition-all duration-300 border ${
-                    activeSection === id 
-                        ? 'text-green-400 border-green-400 bg-green-400/10' 
-                        : 'text-gray-600 dark:text-gray-400 border-transparent hover:text-blue-400 hover:border-blue-400/50'
+                    className={`flex items-center space-x-2 text-xs uppercase tracking-[0.2em] py-1 transition-all duration-300 border-b ${
+                    activeSection === id
+                        ? 'text-charcoal dark:text-warm-gray border-accent'
+                        : 'text-muted-wc border-transparent hover:text-charcoal dark:hover:text-warm-gray'
                     }`}
                 >
-                    <Icon size={16} />
+                    <Icon size={14} />
                     <span>{label}</span>
                 </button>
                 ))}
@@ -54,13 +54,13 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="lg:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1 group"
             >
-                <div className={`w-5 h-0.5 bg-blue-400 transition-all duration-300 ${
+                <div className={`w-5 h-0.5 bg-charcoal dark:bg-warm-gray transition-all duration-300 ${
                 isMobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''
                 }`}></div>
-                <div className={`w-5 h-0.5 bg-blue-400 transition-all duration-300 ${
+                <div className={`w-5 h-0.5 bg-charcoal dark:bg-warm-gray transition-all duration-300 ${
                 isMobileMenuOpen ? 'opacity-0' : ''
                 }`}></div>
-                <div className={`w-5 h-0.5 bg-blue-400 transition-all duration-300 ${
+                <div className={`w-5 h-0.5 bg-charcoal dark:bg-warm-gray transition-all duration-300 ${
                 isMobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''
                 }`}></div>
             </button>
@@ -70,18 +70,18 @@ export const Navbar: React.FC<NavbarProps> = ({ activeSection, setActiveSection 
             <div className={`lg:hidden transition-all duration-300 overflow-hidden ${
             isMobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
             }`}>
-            <div className="py-4 space-y-2 border-t border-green-500/30 mt-4">
+            <div className="py-4 space-y-2 border-t border-gray-200 dark:border-gray-800 mt-4">
                 {texts.NAV_ITEMS.map(({ id, label, icon: Icon }) => (
                 <button
                     key={id}
                     onClick={() => handleNavClick(id)}
-                    className={`w-full flex items-center space-x-3 px-4 py-3 text-sm transition-all duration-300 border-l-2 ${
-                    activeSection === id 
-                        ? 'text-green-400 border-l-green-400 bg-green-400/10' 
-                        : 'text-gray-600 dark:text-gray-400 border-l-transparent hover:text-blue-400 hover:border-l-blue-400 hover:bg-blue-400/5'
+                    className={`w-full flex items-center space-x-3 px-4 py-3 text-xs uppercase tracking-[0.2em] transition-all duration-300 border-l-2 ${
+                    activeSection === id
+                        ? 'text-charcoal dark:text-warm-gray border-l-accent'
+                        : 'text-muted-wc border-l-transparent hover:text-charcoal dark:hover:text-warm-gray hover:border-l-accent'
                     }`}
                 >
-                    <Icon size={18} />
+                    <Icon size={16} />
                     <span>{label}</span>
                 </button>
                 ))}
