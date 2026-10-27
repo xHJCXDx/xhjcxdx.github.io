@@ -13,45 +13,64 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 bg-black/75 flex justify-center z-50 p-4 overflow-y-auto py-20" onClick={onClose}>
-      <div className="bg-white dark:bg-off-black dark:from-green-900/80 dark:to-blue-900/30 border border-green-600/50 dark:border-green-500/50 p-8 rounded-lg max-w-3xl w-full relative text-gray-900 dark:text-white h-min shadow-xl" onClick={(e) => e.stopPropagation()}>
-        <button onClick={onClose} className="absolute top-4 right-4 text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition-colors">
+    <div className="fixed inset-0 z-50 bg-white dark:bg-off-black overflow-y-auto" onClick={onClose}>
+      <div className="max-w-2xl mx-auto px-6 py-20" onClick={(e) => e.stopPropagation()}>
+        <button
+          onClick={onClose}
+          className="fixed top-6 right-6 text-muted-wc hover:text-charcoal dark:hover:text-warm-gray transition-colors"
+        >
           <X size={24} />
         </button>
 
-        <h2 className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-4">{project.title}</h2>
+        <h2 className="font-serif text-4xl font-normal text-charcoal dark:text-warm-gray mb-6">
+          {project.title}
+        </h2>
 
-        <div className="mb-6">
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed" style={{ whiteSpace: 'pre-line' }}>
-            {project.longDescription || project.description}
-          </p>
-        </div>
+        <p className="text-charcoal dark:text-warm-gray leading-relaxed mb-8" style={{ whiteSpace: 'pre-line' }}>
+          {project.longDescription || project.description}
+        </p>
 
         {project.images && project.images.length > 0 && (
-          <div className="mb-6">
-            <h3 className="text-xl text-green-600 dark:text-green-400 mb-4">{texts.PROJECT_MODAL_TEXTS.screenshots}</h3>
+          <div className="mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {project.images.map((img, index) => (
-                <img key={index} src={img} alt={`${project.title} screenshot ${index + 1}`} className="w-full h-auto rounded-md border-2 border-green-600/30 dark:border-green-500/30" />
+                <img
+                  key={index}
+                  src={img}
+                  alt={`${project.title} screenshot ${index + 1}`}
+                  className="w-full h-auto border border-gray-200 dark:border-gray-800"
+                />
               ))}
             </div>
           </div>
         )}
 
-        <div className="mb-6">
-          <h3 className="text-xl text-green-600 dark:text-green-400 mb-2">{texts.PROJECT_MODAL_TEXTS.technologies}</h3>
-          <p className="text-blue-600 dark:text-blue-400">{project.tech}</p>
+        <div className="mb-8">
+          <h3 className="text-xs uppercase tracking-widest text-muted-wc mb-2">
+            {texts.PROJECT_MODAL_TEXTS.technologies}
+          </h3>
+          <p className="text-charcoal dark:text-warm-gray">{project.tech}</p>
         </div>
 
         {(project.liveDemoUrl || project.githubUrl) && (
-          <div className="flex space-x-4 mt-8">
+          <div className="flex gap-6 mt-10 border-t border-gray-200 dark:border-gray-800 pt-6">
             {project.liveDemoUrl && (
-              <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-green-600 dark:border-green-400 text-green-600 dark:text-green-400 hover:bg-green-400/10 transition-all text-center">
+              <a
+                href={project.liveDemoUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent border-b border-accent hover:opacity-70 transition-opacity"
+              >
                 {texts.PROJECT_MODAL_TEXTS.liveDemo}
               </a>
             )}
             {project.githubUrl && (
-              <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="flex-1 py-2 border border-blue-600 dark:border-blue-400 text-blue-600 dark:text-blue-400 hover:bg-blue-400/10 transition-all text-center flex justify-center items-center gap-2">
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-accent border-b border-accent hover:opacity-70 transition-opacity flex items-center gap-2"
+              >
                 <Github size={16} />
                 <span>{texts.PROJECT_MODAL_TEXTS.viewCode}</span>
               </a>
