@@ -1,5 +1,6 @@
 import React from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useFadeIn } from '@/hooks/useFadeIn';
 
 const opacityByLevel: Record<string, string> = {
     High: 'opacity-100',
@@ -9,9 +10,10 @@ const opacityByLevel: Record<string, string> = {
 
 export const Skills: React.FC = () => {
     const { texts } = useLanguage();
+    const { ref: fadeRef, isVisible } = useFadeIn();
 
     return (
-        <section className="min-h-screen py-30 px-6 flex items-center">
+        <section ref={fadeRef} className={`min-h-screen py-30 px-6 flex items-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
         <div className="max-w-3xl mx-auto w-full space-y-8">
             <h2 className="font-serif text-4xl font-normal text-charcoal dark:text-warm-gray mb-12">
             {texts.SKILLS_TEXTS.title}

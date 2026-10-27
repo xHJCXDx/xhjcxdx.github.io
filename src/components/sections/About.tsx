@@ -1,10 +1,12 @@
 import React, { useState, useRef } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useFadeIn } from '@/hooks/useFadeIn';
 import { MoreInfo } from './MoreInfo';
 import { BeyondCode } from './BeyondCode';
 
 export const About: React.FC = () => {
     const { texts } = useLanguage();
+    const { ref: fadeRef, isVisible } = useFadeIn();
     const [showMoreInfo, setShowMoreInfo] = useState(false);
     const [showBeyondCode, setShowBeyondCode] = useState(false);
     const moreInfoRef = useRef<HTMLDivElement>(null);
@@ -25,7 +27,7 @@ export const About: React.FC = () => {
     };
 
     return (
-        <section className="min-h-screen py-30 px-6 flex flex-col justify-center">
+        <section ref={fadeRef} className={`min-h-screen py-30 px-6 flex flex-col justify-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
         <div className="max-w-5xl mx-auto w-full">
             <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-20 items-start mb-16">
             {/* Left — placeholder frame */}

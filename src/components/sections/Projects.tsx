@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useFadeIn } from '@/hooks/useFadeIn';
 import { ProjectModal } from '@/components/ProjectModal';
 import type { Project } from '@/types';
 
 export const Projects: React.FC = () => {
   const { texts } = useLanguage();
+  const { ref: fadeRef, isVisible } = useFadeIn();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
 
   const sortedProjects = [...texts.PROJECTS].sort((a, b) => {
@@ -12,7 +14,7 @@ export const Projects: React.FC = () => {
   });
 
   return (
-    <section className="min-h-screen py-30 px-6">
+    <section ref={fadeRef} className={`min-h-screen py-30 px-6 transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
       <div className="max-w-5xl mx-auto">
         <h2 className="font-serif text-4xl font-normal text-charcoal dark:text-warm-gray mb-16">
           {texts.PROJECTS_TEXTS.title}

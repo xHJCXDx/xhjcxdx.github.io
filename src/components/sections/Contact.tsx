@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
+import { useFadeIn } from '@/hooks/useFadeIn';
 
 export const Contact: React.FC = () => {
   const { texts } = useLanguage();
+  const { ref: fadeRef, isVisible } = useFadeIn();
   const [showForm, setShowForm] = useState(false);
   const [result, setResult] = useState<string | null>(null);
 
@@ -40,7 +42,7 @@ export const Contact: React.FC = () => {
   };
 
   return (
-    <section className="min-h-screen py-30 px-6 flex items-center">
+    <section ref={fadeRef} className={`min-h-screen py-30 px-6 flex items-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
       <div className="max-w-xl mx-auto w-full text-center">
         <h2 className="font-serif text-4xl font-normal text-charcoal dark:text-warm-gray mb-12">
           {texts.CONTACT_TEXTS.title}
