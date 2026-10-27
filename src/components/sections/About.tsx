@@ -1,6 +1,5 @@
 import React, { useState, useRef } from 'react';
 import { useLanguage } from '@/context/LanguageContext';
-import { ChevronDown } from 'lucide-react';
 import { MoreInfo } from './MoreInfo';
 import { BeyondCode } from './BeyondCode';
 
@@ -25,88 +24,67 @@ export const About: React.FC = () => {
         }, 100);
     };
 
-    const getStatColorClass = (color: string) => {
-        switch (color) {
-            case 'blue':
-                return {
-                    border: 'border-blue-400/30',
-                    text: 'text-blue-600 dark:text-blue-400',
-                };
-            case 'green':
-                return {
-                    border: 'border-green-400/30',
-                    text: 'text-green-600 dark:text-green-400',
-                };
-            default:
-                return {
-                    border: 'border-gray-400/30',
-                    text: 'text-gray-600 dark:text-gray-400',
-                };
-        }
-    };
-
     return (
-        <section className="min-h-screen py-20 px-6 flex flex-col justify-center">
-        <div className="max-w-6xl mx-auto w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-12">
+        <section className="min-h-screen py-30 px-6 flex flex-col justify-center">
+        <div className="max-w-5xl mx-auto w-full">
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-20 items-start mb-16">
+            {/* Left — placeholder frame */}
+            <div className="hidden lg:flex items-center justify-center">
+                <div className="w-full aspect-square border border-gray-200 dark:border-gray-800" />
+            </div>
+
+            {/* Right — bio */}
             <div>
-                <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-8 border-b border-blue-400 pb-4">
+                <h2 className="font-serif text-4xl font-normal text-charcoal dark:text-warm-gray mb-8">
                 {texts.ABOUT_TEXTS.title}
                 </h2>
-                <div className="space-y-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+                <div className="space-y-6 text-charcoal dark:text-warm-gray leading-relaxed">
                 {texts.ABOUT_TEXTS.description.map((text, index) => (
                     <p key={index}>{text}</p>
                 ))}
                 </div>
             </div>
-            
-            <div className="relative">
-                <div className="border-2 border-green-600/50 dark:border-green-500/50 p-8 bg-white dark:bg-transparent dark:bg-gradient-to-br dark:from-green-900/20 dark:to-blue-900/20">
-                <div className="grid grid-cols-2 gap-4 text-center">
-                    {texts.ABOUT_TEXTS.stats.map((stat) => {
-                        const colors = getStatColorClass(stat.color);
-                        return (
-                            <div key={stat.label} className={`border ${colors.border} p-4`}>
-                                <div className={`text-2xl font-bold ${colors.text}`}>{stat.value}</div>
-                                <div className="text-sm text-gray-600 dark:text-gray-400">{stat.label}</div>
-                            </div>
-                        );
-                    })}
-                </div>
-                </div>
-            </div>
             </div>
 
+            {/* Stats — horizontal, large numbers */}
+            <div className="flex flex-wrap justify-center gap-16 mb-16">
+            {texts.ABOUT_TEXTS.stats.map((stat) => (
+                <div key={stat.label} className="text-center">
+                    <div className="text-5xl font-serif text-charcoal dark:text-warm-gray">{stat.value}</div>
+                    <div className="text-xs uppercase tracking-widest text-muted-wc mt-2">{stat.label}</div>
+                </div>
+            ))}
+            </div>
+
+            {/* More Info toggle */}
             {!showMoreInfo && (
-                <div className="flex justify-center mt-8">
-                    <button 
+                <div className="flex justify-center">
+                    <button
                         onClick={handleShowMore}
-                        className="group flex flex-col items-center gap-2 text-blue-400 hover:text-blue-300 transition-colors"
+                        className="text-sm text-muted-wc hover:text-accent transition-colors"
                     >
-                        <span className="text-sm tracking-widest">{texts.MORE_INFO_TEXTS.buttonText}</span>
-                        <ChevronDown className="animate-bounce group-hover:translate-y-1 transition-transform" />
+                        {texts.MORE_INFO_TEXTS.buttonText}
                     </button>
                 </div>
             )}
 
             {showMoreInfo && (
-                <div ref={moreInfoRef} className="animate-fade-in-up">
+                <div ref={moreInfoRef} className="animate-fade-in">
                     <MoreInfo />
-                    
+
                     {!showBeyondCode && (
                         <div className="flex justify-center mt-12 pb-10">
-                            <button 
+                            <button
                                 onClick={handleShowBeyondCode}
-                                className="group flex flex-col items-center gap-2 text-green-400 hover:text-green-300 transition-colors"
+                                className="text-sm text-muted-wc hover:text-accent transition-colors"
                             >
-                                <span className="text-sm tracking-widest">{texts.BEYOND_CODE_TEXTS.buttonText}</span>
-                                <ChevronDown className="animate-bounce group-hover:translate-y-1 transition-transform" />
+                                {texts.BEYOND_CODE_TEXTS.buttonText}
                             </button>
                         </div>
                     )}
 
                     {showBeyondCode && (
-                        <div ref={beyondCodeRef} className="animate-fade-in-up">
+                        <div ref={beyondCodeRef} className="animate-fade-in">
                             <BeyondCode />
                         </div>
                     )}
