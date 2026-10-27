@@ -29,14 +29,7 @@ export const About: React.FC = () => {
     return (
         <section ref={fadeRef} className={`min-h-screen py-30 px-6 flex flex-col justify-center transition-all duration-700 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-3'}`}>
         <div className="max-w-5xl mx-auto w-full">
-            <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-20 items-start mb-16">
-            {/* Left — placeholder frame */}
-            <div className="hidden lg:flex items-center justify-center">
-                <div className="w-full aspect-square border border-gray-200 dark:border-gray-800" />
-            </div>
-
-            {/* Right — bio */}
-            <div>
+            <div className="mb-16">
                 <h2 className="font-serif text-4xl font-normal text-charcoal dark:text-warm-gray mb-8">
                 {texts.ABOUT_TEXTS.title}
                 </h2>
@@ -45,7 +38,6 @@ export const About: React.FC = () => {
                     <p key={index}>{text}</p>
                 ))}
                 </div>
-            </div>
             </div>
 
             {/* More Info toggle */}
