@@ -221,9 +221,9 @@ export const CONSOLE_TEXTS = {
 export const ABOUT_TEXTS = {
   title: "ABOUT",
   description: [
-    "> Technical Student in Programming.",
-    "> Programmer specializing in cybersecurity and data analysis.",
-    "> Constantly updating technical expertise.",
+    "> Programming Technician.",
+    "> Take apart to understand. Design to last.",
+    "> A good program is a system that breathes order.",
   ],
   stats: [
     { value: "5", label: "PROJECTS", color: "blue" },

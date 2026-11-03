@@ -212,9 +212,9 @@ export const CONSOLE_TEXTS = {
 export const ABOUT_TEXTS = {
   title: "SOBRE MÍ",
   description: [
-    "> Estudiante Técnico en Programación.",
-    "> Programador enfocado en el análisis de datos y ciberseguridad.",
-    "> En constante actualización técnica.",
+    "> Técnico en Programación.",
+    "> Desarmar para entender. Diseñar para que perdure.",
+    "> Un buen programa es un sistema que respira orden.",
   ],
   stats: [
     { value: "5", label: "PROYECTOS", color: "blue" },
