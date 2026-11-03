@@ -53,9 +53,13 @@ export const Console: React.FC<ConsoleProps> = ({ setActiveSection }) => {
               </div>
               {entry.output.map((segments, j) => (
                 <div key={j} className="pl-4 whitespace-pre-wrap break-words text-charcoal dark:text-warm-gray">
-                  {segments.map((s, k) => (
-                    <span key={k} className={s.color ? colorClass[s.color] : undefined}>{s.text}</span>
-                  ))}
+                  {segments.map((s, k) =>
+                    s.href ? (
+                      <a key={k} href={s.href} target="_blank" rel="noopener noreferrer" className={`underline hover:opacity-80 ${s.color ? colorClass[s.color] : ''}`}>{s.text}</a>
+                    ) : (
+                      <span key={k} className={s.color ? colorClass[s.color] : undefined}>{s.text}</span>
+                    )
+                  )}
                 </div>
               ))}
             </div>

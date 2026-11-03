@@ -7,6 +7,7 @@ type Color = 'green' | 'yellow' | 'cyan' | 'red' | 'blue' | 'purple';
 export interface ConsoleSegment {
   text: string;
   color?: Color;
+  href?: string;
 }
 
 export type ConsoleLine = ConsoleSegment[];
@@ -71,7 +72,7 @@ export const useConsoleCommands = (
       case 'contact':
         output = texts.CONTACT_METHODS.map((c) => [
           seg(`${c.title}: `, 'purple'),
-          seg(c.subtitle),
+          { text: c.href, color: 'cyan' as Color, href: c.href },
         ]);
         break;
 
